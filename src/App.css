@@ -18,6 +18,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   height: 108px;
+  border: 1px solid #ffffff1f;
 }
 
 header nav {
@@ -204,13 +205,7 @@ header nav ul li a i {
   justify-content: center;
   align-items: center;
 }
-.expertise .imgs div:hover {
-  width: 651px;
-  height: 651px;
-  margin-bottom: 22px;
-  margin-right: 22px;
-  top: 7px;
-}
+
 .expertise .imgs .r1 {
   background: url("./Img/exp1.png");
 
@@ -268,7 +263,13 @@ header nav ul li a i {
   border-radius: 60px;
   transform: rotate(45deg);
 }
-
+.expertise .imgs div:hover {
+  width: 651px;
+  height: 651px;
+  margin-bottom: 22px;
+  margin-right: 22px;
+  top: 7px;
+}
 .expertise .mainDiv .gradient .slidingbtn {
   display: flex;
   justify-content: center;
@@ -820,8 +821,7 @@ footer .row .r1:nth-child(2) {
 }
 footer .row .r1:nth-child(3) {
   margin-top: 70.5px;
-
-  margin-left: 150px;
+  margin-left: 166px;
 }
 footer .row .r1:nth-child(4) {
   margin-top: 70.5px;
@@ -829,7 +829,7 @@ footer .row .r1:nth-child(4) {
 }
 footer .row .r1:nth-child(5) {
   margin-top: 101px;
-  margin-left: 134px;
+  margin-left: 120px;
 }
 footer .row .r1 img {
   margin-bottom: 35px;
@@ -918,9 +918,10 @@ footer .row .r1 .innerRow p {
   font-size: 17px;
 }
 footer .row .r1 .listHeading {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
+  line-height: 35px;
 }
 footer .bottom {
   border-top: 1px solid #ffffff52;

@@ -31,8 +31,8 @@ const Expertise = () => {
       </div>
       <div className="mainDiv">
         <div className="gradient">
-          <div className="imgs">
-            <div className="r1" id="r1">
+          <div className="imgs" >
+            <div className="r1" id="r1" onMouseEnter={()=>document.getElementById("r1").style.top= "7px"} onMouseLeave={()=>document.getElementById("r1").style.top= "-68px"}>
               <h3>Innovation</h3>
               <p id="paragraph1">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -46,7 +46,7 @@ const Expertise = () => {
                 industry.
               </p>
             </div>
-            <div className="r3" id="r3">
+            <div className="r3" id="r3" onMouseEnter={()=>document.getElementById("r3").style.top= "7px"} onMouseLeave={()=>document.getElementById("r3").style.top= "-68px"}>
               <h3>Risk Management</h3>
               <p id="paragraph3">
                 Lorem Ipsum is simply dummy text of the printing and typesetting

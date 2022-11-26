@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="r1">
             <p className="listHeading">Expertise</p>
             <ul>
-                <li><a href=""> Strategetic Plan</a></li>
+                <li><a href=""> Strategic Planning</a></li>
                 <li><a href=""> Performance Improvement</a></li>
                 <li><a href=""> Digital Transaformation</a></li>
                 <li><a href=""> Data & Analytics</a></li>
