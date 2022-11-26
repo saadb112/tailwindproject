@@ -69,7 +69,9 @@ const Contact = () => {
               <img src={Location} alt="" />
             </div>
             <p>
-            Nashville Office 10 Burton Hills Blvd Nashville, TN 37215
+            Washington, DC Office 
+1875 K St NW
+Washington, DC 20006
             </p>
           </div>
           <div className="location">
@@ -77,7 +79,10 @@ const Contact = () => {
               <img src={Location} alt="" />
             </div>
             <p>
-            Nashville Office 10 Burton Hills Blvd Nashville, TN 37215
+            Quebec City, Canada Office 
+2828 Bd Laurier
+Québec, QC G1V 0B9, Canada
+
             </p>
           </div>
         </div>

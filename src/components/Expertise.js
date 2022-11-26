@@ -5,15 +5,20 @@ import Right from "../Img/arrowright.png";
 const Expertise = () => {
   
   const Hover = ()=>{
-    document.getElementById("paragraph").style.visibility = "visible"
+
+    document.getElementById("slidingbtn").style.marginTop= "130px"
+    document.getElementById("r1").style.top= "0"
+    document.getElementById("r3").style.top= "0"
   }
   const Unhover = ()=>{
-    document.getElementById("paragraph").style.visibility = "hidden"
+    document.getElementById("slidingbtn").style.marginTop= "54px"
+    document.getElementById("r1").style.top= "-68px"
+    document.getElementById("r3").style.top= "-68px"
   }
   return (
     <section className="expertise">
       <div className="row">
-        <div className="r1">
+        <div className="r1" >
           <img src={ExpImg} alt="" />
         </div>
         <div className="r2">
@@ -27,21 +32,29 @@ const Expertise = () => {
       <div className="mainDiv">
         <div className="gradient">
           <div className="imgs">
-            <div className="r1">
+            <div className="r1" id="r1">
               <h3>Innovation</h3>
-            </div>
-            <div className="r2" onMouseEnter={Hover} onMouseLeave={Unhover} >
-              <h3>Data & Analytics</h3>
-              <p id="paragraph">
+              <p id="paragraph1">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
-            <div className="r3">
+            <div className="r2" onMouseEnter={Hover} onMouseLeave={Unhover} >
+              <h3>Data & Analytics</h3>
+              <p id="paragraph2">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+            <div className="r3" id="r3">
               <h3>Risk Management</h3>
+              <p id="paragraph3">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
             </div>
           </div>
-          <div className="slidingbtn">
+          <div className="slidingbtn" id="slidingbtn">
             <img src={Left} alt="" />
             <div className="centerbtn">
               <div className="circle">

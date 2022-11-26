@@ -6,7 +6,7 @@ const Navbar = () => {
     <header>
         {/* <img src={Logo} alt="" /> */}
         <nav>
-          <img src={Logo} alt="" />
+          <img className='logo' src={Logo} alt="" />
             <ul>
             <li><a href="">Home</a></li>
             <li><a href="">Expertise <i class="fa-solid fa-caret-down"></i></a></li>
@@ -16,7 +16,7 @@ const Navbar = () => {
             <li><a href="">Careers</a></li>
             <li><a href="">About Us</a></li>
             <li><a href="">Contact Us</a></li>
-            <li><a href=""><img src={Uk} alt="" />  <i class="fa-solid fa-caret-down"></i></a></li>
+            <li className='langauge'><a href="" ><img src={Uk} alt="" /> <i class="fa-solid fa-caret-down"></i></a></li>
             
             </ul>
         </nav>

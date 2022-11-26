@@ -38,18 +38,18 @@ const Footer = () => {
           </div>
         </div>
         <div className="r1">
-            <p>Expertise</p>
+            <p className="listHeading">Expertise</p>
             <ul>
                 <li><a href=""> Strategetic Plan</a></li>
                 <li><a href=""> Performance Improvement</a></li>
                 <li><a href=""> Digital Transaformation</a></li>
                 <li><a href=""> Data & Analytics</a></li>
                 <li><a href=""> Innovation</a></li>
-                <li><a href=""> technology Service & Cloud</a></li>
+                <li><a href=""> Technology Service & Cloud</a></li>
             </ul>
         </div>
         <div className="r1">
-            <p>Capital Structure</p>
+            <p className="listHeading">Capital Structure</p>
             <ul>
                 <li><a href=""> Public Companies</a></li>
                 <li><a href=""> Private Equity</a></li>
@@ -60,7 +60,7 @@ const Footer = () => {
             </ul>
         </div>
         <div className="r1">
-            <p>Useful Links</p>
+            <p className="listHeading">Useful Links</p>
             <ul>
                 <li><a href=""> About Us</a></li>
                 <li><a href=""> Careers</a></li>
@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bottom">
-      © 2022 Company Name. All rights reserved. 
+      © 2022 Company Name. All Rights Reserved. 
       </div>
     </footer>
   );

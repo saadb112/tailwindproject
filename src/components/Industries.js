@@ -7,16 +7,13 @@ import Academia from "../Img/Industries/academia.png";
 import Technology from "../Img/Industries/technology.png";
 import Manufacturing from "../Img/Industries/manufacturing.png";
 import Venture from "../Img/Industries/venture.png";
-import Left from "../Img/left.png"
-import Right from "../Img/right.png"
 const Industries = () => {
-  const Hover = ()=>{
-    document.getElementById("img").style.background = "#0EA1EF26"
-    console.log(document.getElementById("img").style.background)
+  const Hover = (id)=>{
+    document.getElementById(`${id}`).style.background = "transparent"
   }
-  const UnHover = ()=>{
-    document.getElementById("img").style.background = "transparent"
-    console.log(document.getElementById("img").style.background)
+  const UnHover = (id)=>{
+    document.getElementById(`${id}`).style.background = "#0EA1EF26"
+   
   }
   return (
     <section className="industries">
@@ -27,38 +24,38 @@ const Industries = () => {
         industry. Lorem Ipsum has been{" "}
       </p>
       <div className="cards">
-        <div className="card" onMouseEnter={Hover} onMouseLeave={UnHover}>
-          <div className="img" id="img" >
+        <div className="card" onMouseEnter={()=>Hover("hc")} onMouseLeave={()=>UnHover("hc")}>
+          <div className="img" id="hc" >
             <img src={Healthcare} alt="" />
           </div>
             <p>Healthcare</p>
         </div>
-        <div className="card">
-          <div className="img">
+        <div className="card" onMouseEnter={()=>Hover("fs")} onMouseLeave={()=>UnHover("fs")}>
+          <div className="img" id="fs">
             <img src={Financial} alt="" />
           </div>
             <p>Financial Services </p>
         </div>
-        <div className="card">
-          <div className="img">
+        <div className="card" onMouseEnter={()=>Hover("fsg")} onMouseLeave={()=>UnHover("fsg")}>
+          <div className="img" id="fsg">
             <img src={Federal} alt="" />
           </div>
             <p>Federal & State Government </p>
         </div>
-        <div className="card">
-          <div className="img">
+        <div className="card" onMouseEnter={()=>Hover("er")} onMouseLeave={()=>UnHover("er")}>
+          <div className="img" id="er">
             <img src={Energy} alt="" />
           </div>
             <p>Energy & Resources </p>
         </div>
-        <div className="card">
-          <div className="img">
+        <div className="card" onMouseEnter={()=>Hover("ac")} onMouseLeave={()=>UnHover("ac")}>
+          <div className="img" id="ac">
             <img src={Academia} alt="" />
           </div>
             <p>Academia </p>
         </div>
-        <div className="card">
-          <div className="img">
+        <div className="card" onMouseEnter={()=>Hover("tt")} onMouseLeave={()=>UnHover("tt")}>
+          <div className="img lh" id="tt">
             <img src={Technology} alt="" />
           </div>
             <p>
@@ -66,16 +63,16 @@ const Industries = () => {
               Telecommunications{" "}
             </p>
         </div>
-        <div className="card">
-          <div className="img">
+        <div className="card" onMouseEnter={()=>Hover("mt")} onMouseLeave={()=>UnHover("mt")}>
+          <div className="img lh" id="mt">
             <img src={Manufacturing} alt="" />
           </div>
             <p>
               Manufacturing, Transport <br />& Logistics{" "}
             </p>
         </div>
-        <div className="card">
-          <div className="img">
+        <div className="card" onMouseEnter={()=>Hover("vc")} onMouseLeave={()=>UnHover("vc")}>
+          <div className="img lh" id="vc">
             <img src={Venture} alt="" />
           </div>
             <p>
