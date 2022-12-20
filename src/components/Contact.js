@@ -1,94 +1,137 @@
-import React from "react";
-import User from "../Img/Contact/user.png";
-import Email from "../Img/Contact/email.png";
-import Location from "../Img/Contact/location.png";
-const Contact = () => {
+import React from 'react'
+import Logo from "../Img/logo.png";
+import Contact2 from "../Img/contact2.png";
+import Admin from "../Img/Admin.svg";
+import General from "../Img/general.svg";
+import Support from "../Img/Support.svg";
+import Navbar from './Navbar';
+import Footer from './Footer';
+
+export default function Contact () {
   return (
-    <section className="contact">
-      <div className="row">
-        <div className="r1">
-          <h3>Contact Us</h3>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been{" "}
-          </p>
+  <>
+  <section class="Home Contact">
+  <Navbar/>
+      <header>
+        <nav>
+          <div class="logo navdiv">
+            <img src={Logo} alt="" />
+            <p>The Quick Rich</p>
+          </div>
+          <div class="Links">
+            <a href="" class="simpleParagraph">Sponsor</a>
+            <a href="" class="simpleParagraph">About</a>
+            <div class="giveaway">
+              <p>Given Away So Far</p>
+              <h1>$22,785</h1>
+            </div>
+            <a href="" class="simpleParagraph">FAQ</a>
+            <a href="" class="simpleParagraph">Contact</a>
+          </div>
+          <button class="btn">
+            Login / Signup
+          </button>
+        </nav>
+      </header>
 
-          <form action="">
-            <div className="inputrow">
-              <div className="input">
-                <p>
-                  <img src={User} alt="" /> First Name
-                </p>
-                <input type="text" placeholder="Enter Your First Name" />
-              </div>
-              <div className="input">
-                <p>
-                  <img src={User} alt="" /> Last Name
-                </p>
-
-                <input type="text" placeholder="Enter Your Last Name" />
-              </div>
-            </div>
-            <div className="inputrow">
-              <div className="input Wlong">
-                <p>
-                  <img src={Email} alt=""  /> Email
-                </p>
-                <input type="text" placeholder="Enter Your Email"/>
-              </div>
-            </div>
-            <div className="inputrow">
-              <div className="input Wlong">
-                <p>
-                  <img src={Email} alt="" /> Message
-                </p>
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="10"
-                  placeholder="Write Message Here"
-                ></textarea>
-              </div>
-            </div>
-            <button>Contact Us</button>
-          </form>
+      <div class="container">
+        <div class="Tagline">
+          <h3>EXCLUSIVE GIVEAWAY</h3>
+          <div class="line"></div>
         </div>
-        <div className="r1 r2">
-          <h3>Office Locations</h3>
-          <div className="location">
-            <div className="icon">
-              <img src={Location} alt="" />
-            </div>
-            <p>
-            Nashville Office 10 Burton Hills Blvd Nashville, TN 37215
-            </p>
-          </div>
-          <div className="location">
-            <div className="icon">
-              <img src={Location} alt="" />
-            </div>
-            <p>
-            Washington, DC Office 
-1875 K St NW
-Washington, DC 20006
-            </p>
-          </div>
-          <div className="location">
-            <div className="icon">
-              <img src={Location} alt="" />
-            </div>
-            <p>
-            Quebec City, Canada Office 
-2828 Bd Laurier
-Québec, QC G1V 0B9, Canada
-
-            </p>
-          </div>
-        </div>
+        <h2>CONTACT US</h2>
+        <p>Power up for a chance to win in this electrafying instant game!</p>
+        <button class="btn">See More</button>
       </div>
     </section>
-  );
-};
+   <section class="section2contact">
+    <div class="row">
+        <div class="r1 ">
 
-export default Contact;
+<div class="form">
+    <h3 class="simpleHeading">Let's Chat</h3>
+    <p class="simpleParagraph logintext">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+
+    </p>
+    <form action="">
+      <div class="inputRow">
+        <div class="input">
+          <label for="">Name</label>
+          <input type="text" placeholder="Enter Your Name" />
+        </div>
+      </div>
+      <div class="inputRow">
+        <div class="input">
+          <label for="">Email</label>
+          <input type="text" placeholder="Enter Your Email " />
+   
+        </div>
+      </div>
+      <div class="inputRow">
+        <div class="input">
+          <label for="">Message</label>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Write Your Message"></textarea>
+          
+        </div>
+      </div>
+      <button class="btn">Send Message</button>
+    </form>
+  </div>
+        </div>
+        <div class="r2">
+            <img src={Contact2} alt="" />
+        </div>
+    </div>
+   </section>
+<section class="section3contact">
+    <h2 class="simpleHeading">
+        Please Contact
+    </h2>
+    <p class="simpleParagraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+<div class="cards">
+    <div class="card">
+        <div class="left">
+          <div class="img">
+            <img src={Admin} alt="" />
+          </div>
+            <div class="text">
+                <h2>Admin</h2>
+                <p>^admin</p>
+            </div>
+        </div>
+        <button class="btn"><a href=""> Contact Now</a></button>
+    </div>
+    <div class="card">
+        <div class="left">
+          <div class="img">
+            <img src={General} alt="" />
+          </div>
+            <div class="text">
+                <h2>General</h2>
+                <p>^general</p>
+
+            </div>
+        </div>
+        <button class="btn"><a href=""> Contact Now</a></button>
+    </div>
+    <div class="card">
+        <div class="left">
+          <div class="img">
+            <img src={Support} alt="" />
+          </div>
+            <div class="text">
+                <h2>Support</h2>
+                <p>^support</p>
+            </div>
+        </div>
+        <button class="btn"><a href=""> Contact Now</a></button>
+    </div>
+</div>
+</section>
+<Footer/>
+
+</>
+  )
+}
+

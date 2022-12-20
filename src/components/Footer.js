@@ -1,83 +1,58 @@
-import React from "react";
-import Logo from "../Img/whitelogo.png";
-import Phone from "../Img/phone.png";
-import Email from "../Img/Contact/email.png";
-import Fb from "../Img/footer/fb.png";
-import Insta from "../Img/footer/insta.png";
-import Twitter from "../Img/footer/twitter.png";
-import Linkedin from "../Img/footer/linkedin.png";
-import Youtube from "../Img/footer/youtube.png";
-import Pinterest from "../Img/footer/pinterest.png";
-import Larrow from "../Img/Larrow.png";
-import Footerimg from "../Img/footer.png";
-const Footer = () => {
+import React from 'react'
+import Fb from "../Img/icons/fb.png";
+import Tw from "../Img/icons/tw.png";
+import Ig from "../Img/icons/ig.png";
+import Youtube from "../Img/icons/youtube.png";
+import Logowhite from "../Img/logoWhite.png";
+
+export default function Footer  ()  {
   return (
     <footer>
-      <div className="row">
-        <div className="r1">
-          <img src={Logo} alt="" />
-          <div className="innerRow">
-            <img src={Phone} alt="" /> <p> (126) 123 1234</p>
-          </div>
-          <div className="innerRow">
-            <img src={Email} alt="" /><p> info@example.com</p>
-          </div>
-          <div className="innerRow icons">
-            <img src={Fb} alt="" />
-            <img src={Insta} alt="" />
-            <img src={Twitter} alt="" />
-            <img src={Linkedin} alt="" />
-            <img src={Youtube} alt="" />
-            <img src={Pinterest} alt="" />
-          </div>
-          <div className="innerRow input">
-            <input type="text" placeholder="Enter Your Email" />
-            <div className="icon">
-                <img src={Larrow} alt="" />
-            </div>
-          </div>
+    <div class="container">
+      <div class="r1">
+        <div class="logo">
+          <img src={Logowhite} alt="" />
+          <p>The Quick Rich</p>
         </div>
-        <div className="r1">
-            <p className="listHeading">Expertise</p>
-            <ul>
-                <li><a href=""> Strategic Planning</a></li>
-                <li><a href=""> Performance Improvement</a></li>
-                <li><a href=""> Digital Transaformation</a></li>
-                <li><a href=""> Data & Analytics</a></li>
-                <li><a href=""> Innovation</a></li>
-                <li><a href=""> Technology Service & Cloud</a></li>
-            </ul>
-        </div>
-        <div className="r1">
-            <p className="listHeading">Capital Structure</p>
-            <ul>
-                <li><a href=""> Public Companies</a></li>
-                <li><a href=""> Private Equity</a></li>
-                <li><a href=""> Venture Capital</a></li>
-                <li><a href=""> Federal & State Government</a></li>
-                <li><a href=""> Academia and Non Profits</a></li>
-           
-            </ul>
-        </div>
-        <div className="r1">
-            <p className="listHeading">Useful Links</p>
-            <ul>
-                <li><a href=""> About Us</a></li>
-                <li><a href=""> Careers</a></li>
-                <li><a href=""> Terms & Conditions</a></li>
-                <li><a href=""> Careers</a></li>
-                <li><a href=""> Careers</a></li>
-            </ul>
-        </div>
-        <div className="r1">
-            <img src={Footerimg} alt="" />
+        <p class="simpleParagraph">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been
+        </p>
+        <div class="socialIcons">
+          <img src={Fb} alt="" />
+          <img src={Tw} alt="" />
+          <img src={Ig} alt="" />
+          <img src={Youtube} alt="" />
         </div>
       </div>
-      <div className="bottom">
-      © 2022 Company Name. All Rights Reserved. 
+      <div class="r1">
+        <h2>Links</h2>
+        <ul>
+          <li class="simpleParagraph">Home</li>
+          <li class="simpleParagraph">About</li>
+          <li class="simpleParagraph">Quick Cash</li>
+          <li class="simpleParagraph">FAQ</li>
+          <li class="simpleParagraph">Contact</li>
+        </ul>
       </div>
-    </footer>
-  );
-};
+      <div class="r1">
+        <h2>Utility Pages</h2>
+        <ul>
+          <li class="simpleParagraph">Sponsor a Giveaway</li>
+          <li class="simpleParagraph">Create a Contest</li>
+          <li class="simpleParagraph">Enter a Cash Forum</li>
+          <li class="simpleParagraph">Free Financial Guidance</li>
+          <li class="simpleParagraph">Beg For Money</li>
+        </ul>
+      </div>
+      <div class="r1">
+        <h2>Newsletter</h2>
+        <input type="text" placeholder="Enter Your Email Address" />
+        <button class="submit">Submit</button>
+      </div>
+    </div>
+    <div class="bottom">© 2022 The Quick Rich. All rights reserved</div>
+  </footer>
+  )
+}
 
-export default Footer;

@@ -1,27 +1,56 @@
-import React from 'react'
-import Logo from "../Img/logo.png"
-import Uk from "../Img/uk.png"
-const Navbar = () => {
+import React, { useState } from 'react'
+import Logo from "../Img/logo.png";
+
+export default function Navbar  () {
+const [Toggle, setToggle] = useState(false)
+ 
+    const navbar = ()=>{
+        setToggle(!Toggle)
+      }
   return (
-    <header>
-        {/* <img src={Logo} alt="" /> */}
-        <nav>
-          <img className='logo' src={Logo} alt="" />
-            <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Expertise <i class="fa-solid fa-caret-down"></i></a></li>
-            <li><a href="">Industries <i class="fa-solid fa-caret-down"></i></a></li>
-            <li><a href="">Capital Structure <i class="fa-solid fa-caret-down"></i></a></li>
-            <li><a href="">People</a></li>
-            <li><a href="">Careers</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Contact Us</a></li>
-            <li className='langauge'><a href="" ><img src={Uk} alt="" /> <i class="fa-solid fa-caret-down"></i></a></li>
-            
-            </ul>
-        </nav>
-    </header>
+    <>
+     <div class="mobileHeader">
+          <div class="logo navdiv">
+            <img src={Logo} alt="" />
+            <p>The Quick Rich</p>
+          </div>
+          <div class="navbarButton" onClick={navbar}>
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+          </div>
+        </div>
+        <div class="header2" id="header" style={Toggle ? {"top" : "0rem"} : {"top" : "-70rem"}}>
+          <div onClick={navbar}>
+            <p class="close">X</p>
+          </div>
+          <nav>
+            <div class="logo navdiv">
+              <img src={Logo} alt="" />
+              <p>The Quick Rich</p>
+            </div>
+            <div class="Links">
+              <a href="" class="simpleParagraph">
+                Sponsor
+              </a>
+              <a href="" class="simpleParagraph">
+                About
+              </a>
+              <div class="giveaway">
+                <p>Given Away So Far</p>
+                <h1>$22,785</h1>
+              </div>
+              <a href="" class="simpleParagraph">
+                FAQ
+              </a>
+              <a href="" class="simpleParagraph">
+                Contact
+              </a>
+            </div>
+            <button class="btn">Login / Signup</button>
+          </nav>
+        </div>
+    </>
   )
 }
 
-export default Navbar
