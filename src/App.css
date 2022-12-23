@@ -6,3 +6,13 @@ html{
   margin: 0;
   box-sizing: border-box;
 }
+.slick-track{
+  display: flex !important;
+}
+.GStories .slick-slider .slick-list .slick-track .slick-slide{
+  margin-right: 7.8rem;
+}
+.Modular .slick-slider .slick-list .slick-track .slick-slide{
+  margin-right: 2.3rem;
+
+}

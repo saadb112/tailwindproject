@@ -1,8 +1,94 @@
-import React from "react";
-
+import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const Home = () => {
+  const [left, setleft] = useState(0.0);
+  const [prev, setprev] = useState(0.0);
+  const Prev = () => {
+    if (left == 0) {
+    } else {
+      setleft(left + 100);
+    }
+  };
+  const Next = () => {
+    if (left == -300) {
+    } else {
+      setleft(left - 100);
+    }
+  };
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   return (
     <>
+      {/* -------------OVERLAY----------------- */}
+      <section className="w-[100%] bg-[rgba(38,38,38,0.25)] absolute  z-[100]">
+
+      <div className="bg-[#FAF6F4] w-[45.1rem] pt-[4.9rem] relative">
+<div className="w-[3rem] h-[3rem] border border-black rounded-full absolute top-[2rem] right-[2rem]">
+
+</div>
+
+        <div className="w-[36.2rem] h-[34.9rem] rounded-full  ml-[3.4rem] bg-slate-500"></div>
+        <div className="text-[#262626] ml-[3.4rem] w-[36.2rem]">
+          <h1 className=" text-[4rem] leading-[4.8rem] mt-[5.7rem]">
+            Dr. Lauren Redies
+          </h1>
+          <p className=" text-[1.4rem] leading-[1.8rem] ">
+            Medical Director, Streeterville
+          </p>
+
+          <p className=" text-[1.8rem] leading-[2.4rem]  mt-[4rem] ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            pellentesque, lacus quis maximus porta, lorem lectus egestas arcu,
+            vitae porttitor sem quam quis nisl. Sed non ligula hendrerit,
+            bibendum quam at, congue magna. Aenean ac maximus libero. Mauris
+            fermentum neque ut diam dignissim, id lacinia magna posuere.
+          </p>
+
+          <div className="mt-[9.1rem]">
+            <h2 className="text-[#FEC20D] text-[2.2rem] leading-[2.9rem] font-semibold">
+              What (or who) inspired you to get into Pet care? How so?
+            </h2>
+            <p className=" text-[1.8rem] leading-[2.4rem]  mt-[2rem] font-[500]">
+              Ever since I was a child, I was always loved animails, so I
+              decided to become a Veterinarian.
+            </p>
+          </div>
+          <div className="mt-[4rem]">
+            <h2 className="text-[#FEC20D] text-[2.2rem] leading-[2.9rem] font-semibold">
+            What’s the most rewarding part of your job at GoodVets?
+            </h2>
+            <p className=" text-[1.8rem] leading-[2.4rem]  mt-[2rem] font-[500]">
+            Aliquam vitae dictum turpis. Proin tincidunt imperdiet augue a tristique. Maecenas nec purus quis nunc bibendum venenatis sed porta orci. Vivamus hendrerit non ligula id maximus.
+            </p>
+          </div>
+          <div className="mt-[9.1rem]">
+            <h2 className="text-[#FEC20D] text-[2.2rem] leading-[2.9rem] font-semibold">
+            How do you recharge after a long week? What’s your go-to activity for hitting the restart button?
+            </h2>
+            <p className=" text-[1.8rem] leading-[2.4rem]  mt-[2rem] font-[500]">
+            Aliquam vitae dictum turpis. Proin tincidunt imperdiet augue a tristique. Maecenas nec purus quis nunc.
+            </p>
+          </div>
+          <div className="mt-[9.1rem]">
+            <h2 className="text-[#FEC20D] text-[2.2rem] leading-[2.9rem] font-semibold">
+            In another life, if you weren’t working in Pet care, what would you be doing?
+            </h2>
+            <p className=" text-[1.8rem] leading-[2.4rem]  mt-[2rem] font-[500]">
+            Aliquam vitae dictum turpis. Proin tincidunt imperdiet augue a tristique. Maecenas nec purus quis nunc.
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
+
       <section className="main bg-slate-500 h-[62.2rem]">
         <header className="border-b border-white">
           <nav className="flex justify-between items-center">
@@ -33,41 +119,110 @@ const Home = () => {
             Associative Vets
           </p>
           <h1 className="text-[7rem]  text-center text-white leading-[8rem] ">
-            Grow alongside your <br /> hospital’s Owner
+            A Vet-Owned Hospital,
+            <br /> Invested in You
           </h1>
         </div>
+        <button className="text-[1.4rem] leading-[2rem] text-[#262626] w-[21.3rem] h-[5rem] bg-[#FEC20D] rounded-[5rem] absolute right-[3.5rem] top-[65.8rem] hover:bg-[#262626] hover:text-white">
+          VIEW OPPORTUNITIES
+        </button>
       </section>
 
-      <section className="section2 bg-[#faf6f4] rounded-t-2xl h-[36.2rem]">
+      <section className="section2 bg-[#faf6f4] rounded-t-2xl h-[38.2rem]">
         <p className="w-[112.2rem] text-[#262626] text-[4rem] mx-auto text-center pt-[7.4rem] font-semibold leading-[4.8rem]">
-          As an Associate Vet at GoodVets your Medical Director is also the
-          owner of the hospital, which means higher quality of care and
-          mentorship from the top down.
+          As an associate veterinarian at GoodVets, you'll be mentored by a
+          partner veterinarian who is personally invested in your success.
         </p>
       </section>
 
       <section className="section3 pb-[10rem]">
         <h1 className="text-[7rem] leading-[8rem] mx-auto my-40 text-center">
-          Mentorship & culture <span className="text-yellow-500"> matter</span>
+          A Culture of <span className="text-yellow-500"> Mentorship</span>
         </h1>
-        <div className="rows">
-          <div className="row1 flex justify-center">
-            <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]"></div>
-            <div className="r2 mx-[3.9rem] flex flex-col justify-center items-start text-[#282826]">
-              <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
-                Vet-Crafted <br /> Standards of Care
-              </h1>
-              <p className="w-[47.2rem] text-[1.8rem] leading-[2.4rem]">
-                Sed gravida fringilla nisi, in ultrices urna consequat in. Proin
-                volutpat, elit ut tristique sagittis, urna justo accumsan purus,
-                sed orci urna a lectus nulla eget.
-              </p>
+        <div className="relative flex justify-center items-center flex-col">
+          <div className="absolute w-[94.8%] z-10  flex justify-between items-center top-[18rem] ">
+            <button
+              className="p-[1rem] border border-black rounded-full h-[5rem] w-[5rem] hover:bg-[#FEC20D] hover:border-transparent"
+              onClick={Prev}
+            >
+              Prev
+            </button>
+            <button
+              className="p-[1rem] border border-black rounded-full h-[5rem] w-[5rem] hover:bg-[#FEC20D] hover:border-transparent"
+              onClick={Next}
+            >
+              Next
+            </button>
+          </div>
+          <div className="rows flex max-w-[136.6rem] overflow-hidden">
+            <div
+              className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
+              style={{ position: "relative", left: `${left}%` }}
+            >
+              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]"></div>
+              <div className="r2 mx-[3.9rem] flex flex-col justify-center items-start text-[#282826]">
+                <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
+                  Veterinarian-Led <br /> Medicine
+                </h1>
+                <p className="w-[47.2rem] text-[1.8rem] leading-[2.4rem]">
+                  Our partner veterinarians design their own medical programs,
+                  so you'll be learning from and working with your hospital's
+                  top dog.
+                </p>
+              </div>
+            </div>
+            <div
+              className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
+              style={{ position: "relative", left: `${left}%` }}
+            >
+              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]"></div>
+              <div className="r2 mx-[3.9rem] flex flex-col justify-center items-start text-[#282826]">
+                <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
+                  Mentorship From Our <br /> Chief Medical Officer
+                </h1>
+                <p className="w-[47.2rem] text-[1.8rem] leading-[2.4rem]">
+                  Our Chief Medical Officer, Dr. Antonio DeMarco, aids in the
+                  growth and development of every associate, helping craft the
+                  career path that's right for you.
+                </p>
+              </div>
+            </div>
+            <div
+              className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
+              style={{ position: "relative", left: `${left}%` }}
+            >
+              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]"></div>
+              <div className="r2 mx-[3.9rem] flex flex-col justify-center items-start text-[#282826]">
+                <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
+                  Education from our <br /> Veterinary Advisor
+                </h1>
+                <p className="w-[47.2rem] text-[1.8rem] leading-[2.4rem]">
+                  Dr. Cindy Charlier architects tailored training programs and
+                  provides guidance on continuing education for associates.
+                </p>
+              </div>
+            </div>
+            <div
+              className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
+              style={{ position: "relative", left: `${left}%` }}
+            >
+              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]"></div>
+              <div className="r2 mx-[3.9rem] flex flex-col justify-center items-start text-[#282826]">
+                <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
+                  Professional & <br /> Performance Coaching
+                </h1>
+                <p className="w-[47.2rem] text-[1.8rem] leading-[2.4rem]">
+                  As an Associate, you’ll be connected to a dedicated business
+                  coach from Boon Health, who can advise on everything from work
+                  challenges to interpersonal relationships.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="h-[81.6rem] bg-[#FAF6F4]">
+      <section className="h-[81.6rem] bg-[#FAF6F4] mt-[-3rem]">
         <div>
           <div className="flex flex-col justify-start items-center relative">
             <div className="h-[24.3rem] w-[25.2rem] bg-slate-500 rounded-[100%] relative top-[14rem] z-10"></div>
@@ -86,8 +241,8 @@ const Home = () => {
 
       <section className="flex flex-col justify-center items-center">
         <h1 className="text-[7rem] mx-auto my-40 text-center leading-[8rem]  ">
-          From Associate to Hospital{" "}
-          <span className="text-yellow-500"> Owner</span>
+          Many Ways to Take
+          <span className="text-yellow-500"> Ownership</span>
         </h1>
         <div className="rows">
           <div className="row1 flex justify-center mt-[4rem]">
@@ -98,12 +253,12 @@ const Home = () => {
             </div>
             <div className="r2 mx-[3.9rem] flex flex-col justify-end pb-[6rem] items-start text-[#282826]">
               <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
-                Growing with GoodVets
+                Expand Your Expertise
               </h1>
               <p className="w-[47.2rem] text-[1.8rem] leading-[2.4rem]">
-                By joining our team you can focus on practicing animal care and
-                receive on-the-job training to prepare for becoming a partner
-                yourself.
+                Working at GoodVets is an education unto itself. You’ll be
+                mentored by visionary partner vets, practice alongside talented
+                peers, and uncover your own unique skills and passions.
               </p>
             </div>
           </div>
@@ -115,11 +270,13 @@ const Home = () => {
             </div>
             <div className="r2 mx-[3.9rem] flex flex-col justify-end pb-[6rem] items-start text-[#282826]">
               <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
-                Associate Equity Ownership
+                Access to Equity
               </h1>
               <p className="w-[47.2rem] text-[1.8rem] leading-[2.4rem]">
-                Buy into your hospital as an associate <br /> and share in your
-                hospital’s growth.
+                As an associate veterinarian, you have a unique opportunity to
+                invest in the hospital where you work. As a co-owner, you’ll
+                share in the hospital’s success and gain entrepreneurial
+                experience that complements your medical training.
               </p>
             </div>
           </div>
@@ -131,40 +288,47 @@ const Home = () => {
             </div>
             <div className="r2 mx-[3.9rem] flex flex-col justify-end pb-[6rem] items-start text-[#282826]">
               <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
-                Begin the Path <br /> to Partnership
+                Pursue the Path <br /> to Ownership
               </h1>
               <p className="w-[47.2rem] text-[1.8rem] leading-[2.4rem]">
-                We create long-term opportunities to build an and own your own
-                hospital as a partner.
+                Co-owning and running your own hospital is the natural
+                progression for many—though not all—of our associates. If that’s
+                your goal, we’re ready to help you achieve it.
               </p>
             </div>
           </div>
         </div>
         <h1 className="text-8xl mx-auto mb-[8rem] mt-[10rem] text-center">
-          Your long-term <span className="text-yellow-500"> future</span>
+          Get <span className="text-yellow-500"> Started!</span>
         </h1>
-        <button className="border border-black px-[3rem] py-[1.6rem] text-[1.4rem] leading-[2rem] rounded-[5rem] mx-auto">
+        <button className="border border-black px-[3rem] py-[1.6rem] text-[1.4rem] leading-[2rem] rounded-[5rem] mx-auto  hover:bg-[#FEC20D] hover:border-[#FEC20D]">
           LEARN ABOUT PARTNERSHIP
         </button>
       </section>
 
       <section className="bg-[rgba(217,199,184,0.25)] mt-[9.9rem] pb-[10rem] flex flex-col items-end">
-        <h1 className="text-[4rem] font-semibold leading-[4.8rem] pt-[10rem] mb-[10rem] text-[#262626] w-screen pl-[8.9rem]" >
-          Our modern, state-of-the-art facilites
+        <h1 className="text-[4rem] font-semibold leading-[4.8rem] pt-[10rem] mb-[10rem] text-[#262626] w-screen pl-[8.9rem]">
+          Modular
         </h1>
-        <div className="flex justify-start items-start max-w-[124.3rem] overflow-hidden">
-          <div className="">
-            <div className="w-[58.2rem] h-[40rem] bg-slate-400"></div>
-            <p className="text-[1.4rem] mt-[2rem]">Image Caption</p>
-          </div>
-          <div className="ml-[2.3rem]">
-            <div className="w-[36.2rem] h-[40rem] bg-slate-400"></div>
-            <p className="text-[1.4rem] mt-[2rem]">Image Caption</p>
-          </div>
-          <div className="ml-[2.3rem]">
-            <div className="w-[28.7rem] h-[40rem] bg-slate-400"></div>
-            <p className="text-[1.4rem] mt-[2rem]">Image Caption</p>
-          </div>
+        <div className="max-w-[124.3rem] Modular">
+          <Slider {...settings}>
+            <div className="w-[58.2rem]">
+              <div className="w-[100] h-[40rem] bg-slate-400 m-0"></div>
+              <p className="text-[1.4rem] mt-[2rem]">Image Caption</p>
+            </div>
+            <div className="w-[58.2rem]">
+              <div className="w-[100] h-[40rem] bg-slate-400 m-0"></div>
+              <p className="text-[1.4rem] mt-[2rem]">Image Caption</p>
+            </div>
+            <div className="w-[58.2rem]">
+              <div className="w-[100] h-[40rem] bg-slate-400 m-0"></div>
+              <p className="text-[1.4rem] mt-[2rem]">Image Caption</p>
+            </div>
+            <div className="w-[58.2rem]">
+              <div className="w-[100%] h-[40rem] bg-slate-400 m-0"></div>
+              <p className="text-[1.4rem] mt-[2rem]">Image Caption</p>
+            </div>
+          </Slider>
         </div>
       </section>
 
@@ -194,178 +358,248 @@ const Home = () => {
               </h1>
             </div>
           </div>
-          
+
           <div className="ml-[2.3rem]">
             <div className="h-[1.8rem] w-[20rem] bg-[#FEC20D]">
               <h1 className="font-semibold text-[1.4rem] leading-[1.8rem] relative top-[-.6rem] left-[-.8rem] text-[#282826]">
-              QUALITY OF CARE & CAREER
+                QUALITY OF CARE & CAREER
               </h1>
             </div>
             <div className="w-[41.7rem] h-[25rem] bg-white mt-[3.3rem]">
               <h1 className="ml-[5.6rem] text-[1.4rem] leading-[1.8rem] pt-[1.6rem] mb-[3.2rem]">
-              Favorable staffing ratios
+                Favorable staffing ratios
               </h1>
               <h1 className="ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
-              Practice medicine alongside hospital owners
+                Practice medicine alongside hospital owners
               </h1>
               <h1 className="ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
-              Continuing education & license support
+                Continuing education & license support
               </h1>
               <h1 className="ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
-              Hospital-level growth opportunities
+                Hospital-level growth opportunities
               </h1>
               <h1 className="ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
-              Best-in-class facilities and technology
+                Best-in-class facilities and technology
               </h1>
             </div>
           </div>
           <div className="ml-[2.3rem]">
             <div className="h-[1.8rem] w-[20rem] bg-[#FEC20D]">
               <h1 className="font-semibold text-[1.4rem] leading-[1.8rem] relative top-[-.6rem] left-[-.8rem] text-[#282826]">
-              QUALITY OF LIFE
+                QUALITY OF LIFE
               </h1>
             </div>
             <div className="w-[41.7rem] h-[20rem] bg-white mt-[3.3rem]">
               <h1 className="ml-[5.6rem] text-[1.4rem] leading-[1.8rem] pt-[1.6rem] mb-[3.2rem]">
-              Leading compensation and bonuses
+                Leading compensation and bonuses
               </h1>
               <h1 className="ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
-              Annual raises
+                Annual raises
               </h1>
               <h1 className="ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
-              401k matching
+                401k matching
               </h1>
               <h1 className="ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
-              Profit sharing
+                Profit sharing
               </h1>
             </div>
           </div>
         </div>
       </section>
 
-
       <section className="bg-[#FAF6F4] pt-40 flex justify-center items-center flex-col">
-      <h1 className="text-[7rem] mx-auto mb-[9rem] text-center leading-[8rem]  ">
-      Launch your career 
+        <h1 className="text-[7rem] mx-auto mb-[9rem] text-center leading-[8rem]  ">
+          Launch your career
           <span className="text-yellow-500"> now</span>
         </h1>
 
         <div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
-            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">Veterinary Technician - The Gultch</h1>
-            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">Nashville, TN</p>
+            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">
+              Veterinary Technician - The Gultch
+            </h1>
+            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
+              Nashville, TN
+            </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
           </div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
-            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">Veterinary Technician - West Loop</h1>
-            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">Chicago, IL</p>
+            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">
+              Veterinary Technician - West Loop
+            </h1>
+            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
+              Chicago, IL
+            </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
           </div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
-            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">Veterinary Technician - Coconut Grove</h1>
-            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">Miami, FL</p>
+            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">
+              Veterinary Technician - Coconut Grove
+            </h1>
+            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
+              Miami, FL
+            </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
           </div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
-            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">Veterinary Technician - Wynwood</h1>
-            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">Miami, FL</p>
+            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">
+              Veterinary Technician - Wynwood
+            </h1>
+            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
+              Miami, FL
+            </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
           </div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
-            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">Veterinary Technician - The Gultch</h1>
-            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">Nashville, TN</p>
+            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">
+              Veterinary Technician - The Gultch
+            </h1>
+            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
+              Nashville, TN
+            </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
           </div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
-            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">Veterinary Technician - West Loop</h1>
-            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">Chicago, IL</p>
+            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">
+              Veterinary Technician - West Loop
+            </h1>
+            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
+              Chicago, IL
+            </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
           </div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center mt-[8rem]">
-            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">Veterinary Technician - Wynwood</h1>
-            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">Miami, FL</p>
+            <h1 className="text-[1.8rem] leading-[2.4rem] text-[#282826] font-semibold w-[43.6rem]">
+              Veterinary Technician - Wynwood
+            </h1>
+            <p className="text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
+              Miami, FL
+            </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
           </div>
         </div>
 
-        <button className="border border-black px-[3rem] py-[1.6rem] text-[1.4rem] leading-[2rem] rounded-[5rem] mx-auto mt-[8rem]">VIEW ALL</button>
+        <button className="border border-black px-[3rem] py-[1.6rem] text-[1.4rem] leading-[2rem] rounded-[5rem] mx-auto mt-[8rem]">
+          VIEW ALL
+        </button>
       </section>
-
-
 
       <section className="bg-[#FAF6F4] pt-[9.9rem] pb-[10rem] flex flex-col justify-center items-end">
-      <h1 className="text-[7rem] mx-auto mb-[9rem] leading-[8rem]  text-left w-screen pl-[8.9rem]">
-          <span className="text-yellow-500">    Good Stories </span>
-    from GoodVets
+        <h1 className="text-[7rem] mx-auto mb-[9rem] leading-[8rem]  text-left w-screen pl-[8.9rem]">
+          <span className="text-yellow-500"> Good Stories </span>
+          from GoodVets
         </h1>
-        <div className="flex justify-end items-start  overflow-hidden max-w-[127.7rem]">
-          <div className=" h-[58.4rem] bg-white w-[41.7rem]">
+        <div className=" GStories max-w-[127.7rem]">
+          <Slider {...settings}>
+            <div className=" h-[58.4rem] bg-white w-[41.7rem]">
+              <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
+              <p className="text-[2.2rem] leading-[2.9rem] font-semibold mt-[3rem] ml-[2rem] w-[34.3rem]">
+                How to build a successful career in the veterinary industry.
+              </p>
+              <p className="text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">
+                BY AUTHOR NAME <br />
+                <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
+              </p>
+            </div>
+            <div className=" h-[58.4rem] bg-white w-[41.7rem]">
+              <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
+              <p className="text-[2.2rem] leading-[2.9rem] font-semibold mt-[3rem] ml-[2rem] w-[34.3rem]">
+                Dr. Sheela Moss on how being a mentor enriches her career.
+              </p>
+              <p className="text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">
+                BY AUTHOR NAME <br />
+                <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
+              </p>
+            </div>
+            <div className=" h-[58.4rem] bg-white w-[41.7rem]">
+              <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
+              <p className="text-[2.2rem] leading-[2.9rem] font-semibold mt-[3rem] ml-[2rem] w-[34.3rem]">
+                Dr. Sheela Moss on how being a mentor enriches her career.
+              </p>
+              <p className="text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">
+                BY AUTHOR NAME <br />
+                <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
+              </p>
+            </div>
+            <div className=" h-[58.4rem] bg-white w-[41.7rem]">
+              <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
+              <p className="text-[2.2rem] leading-[2.9rem] font-semibold mt-[3rem] ml-[2rem] w-[34.3rem]">
+                Dr. Sheela Moss on how being a mentor enriches her career.
+              </p>
+              <p className="text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">
+                BY AUTHOR NAME <br />
+                <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
+              </p>
+            </div>
+            {/* <div className="ml-[7.8rem] h-[58.4rem] bg-white w-[41.7rem] overflow-hidden">
             <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
-            <p className="text-[2.2rem] leading-[2.9rem] font-semibold mt-[3rem] ml-[2rem] w-[34.3rem]">How to build a successful career in the veterinary industry.</p>
-            <p className="text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">BY AUTHOR NAME <br /><span className="text-[#D9C7B8]"> AUTHOR TITLE</span></p>
-          </div>
-          <div className="ml-[7.8rem] h-[58.4rem] bg-white w-[41.7rem]">
-            <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
-            <p className="text-[2.2rem] leading-[2.9rem] font-semibold mt-[3rem] ml-[2rem] w-[34.3rem]">Dr. Sheela Moss on how being a mentor enriches her career.</p>
-            <p className="text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">BY AUTHOR NAME <br /><span className="text-[#D9C7B8]"> AUTHOR TITLE</span></p>
-          </div>
-          <div className="ml-[7.8rem] h-[58.4rem] bg-white w-[41.7rem] overflow-hidden">
-            <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
-            <p className="text-[2.2rem] leading-[2.9rem] font-semibold mt-[3rem] ml-[2rem] w-[34.3rem]">Take a Tour of GoodVets in Streeterville, Chicago.</p>
-            <p className="text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">BY AUTHOR NAME <br /><span className="text-[#D9C7B8]"> AUTHOR TITLE</span></p>
-          </div>
+            <p className="text-[2.2rem] leading-[2.9rem] font-semibold mt-[3rem] ml-[2rem] w-[34.3rem]">
+              Take a Tour of GoodVets in Streeterville, Chicago.
+            </p>
+            <p className="text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">
+              BY AUTHOR NAME <br />
+              <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
+            </p>
+          </div> */}
+          </Slider>
         </div>
-        <button className="border border-black px-[3rem] py-[1.6rem] text-[1.4rem] leading-[2rem] rounded-[5rem] mx-auto mt-[8rem]">MORE GOOD STORIES</button>
-
+        <button className="border border-black px-[3rem] py-[1.6rem] text-[1.4rem] leading-[2rem] rounded-[5rem] mx-auto mt-[8rem] hover:bg-[#FEC20D] hover:border-[#FEC20D] ">
+          MORE GOOD STORIES
+        </button>
       </section>
-
 
       <section className="pl-[8.9rem] pb-[12rem]">
         <h1 className="text-[4rem] leading-[4.8rem] w-[55.8rem] mt-[8.1rem] mb-[6rem] text-[#262626]">
-        Keep up with what’s <br /> happening at GoodVets!
+          Keep up with what’s <br /> happening at GoodVets!
         </h1>
         <div className="w-[124.2rem] border-b border-black ">
-        <h1 className="text-[2.2rem] leading-[2.9rem] font-semibold text-[#262626]">Enter your email</h1>
+          {/* <h1 className="text-[2.2rem] leading-[2.9rem] font-semibold text-[#262626]">
+            Enter your email
+          </h1> */}
+          <input
+            type="text "
+            className="text-[2.2rem] leading-[2.9rem] font-semibold w-[100%] hover:placeholder:text-[#FEC20D] outline-none"
+            placeholder="Enter Your Email"
+          />
         </div>
       </section>
 
-
       <footer className="flex flex-col justify-between bg-[#262626] text-[1.4rem] leading-[1.8rem] text-white h-[42.6rem] pt-[6rem]">
         <div className="flex">
-        <div className="ml-[3.4rem]"> 
-          <p className=" w-[14.2rem]">My Account</p>
-        </div>
-        <div className="ml-[40.8rem]">
-          <p className="mb-[1rem] w-[14.2rem]">Locations</p>
-          <p className="mb-[1rem] w-[14.2rem]">Services</p>
-          <p className="mb-[1rem] w-[14.2rem]">Virtual care</p>
-          <p className="mb-[1rem] w-[14.2rem]">Wellness Plans</p>
-        </div>
-        <div className="ml-[13.3rem]">
-          <p  className="mb-[1rem] w-[14.2rem]">Join our Team</p>
-          <p  className="mb-[1rem] w-[14.2rem]">Partner with Us</p>
-          <p  className="mb-[1rem] w-[14.2rem]">Associate Vets</p>
-          <p  className="mb-[1rem] w-[14.2rem]">New Grads</p>
-          <p  className="mb-[1rem] w-[14.2rem]">Technicians & Staff</p>
-        </div>
-        <div className="ml-[13.3rem]">
-          <p  className="mb-[1rem] w-[14.2rem]">Careers</p>
-          <p  className="mb-[1rem] w-[14.2rem]">Journal</p>
-          <p  className="mb-[1rem] w-[14.2rem]">FAQ</p>
-          <p  className="mb-[1rem] w-[14.2rem]">Press</p>
-        </div>
+          <div className="ml-[3.4rem]">
+            <p className=" w-[14.2rem]">My Account</p>
+          </div>
+          <div className="ml-[40.8rem]">
+            <p className="mb-[1rem] w-[14.2rem]">Locations</p>
+            <p className="mb-[1rem] w-[14.2rem]">Services</p>
+            <p className="mb-[1rem] w-[14.2rem]">Virtual care</p>
+            <p className="mb-[1rem] w-[14.2rem]">Wellness Plans</p>
+          </div>
+          <div className="ml-[13.3rem]">
+            <p className="mb-[1rem] w-[14.2rem]">Join our Team</p>
+            <p className="mb-[1rem] w-[14.2rem]">Partner with Us</p>
+            <p className="mb-[1rem] w-[14.2rem]">Associate Vets</p>
+            <p className="mb-[1rem] w-[14.2rem]">New Grads</p>
+            <p className="mb-[1rem] w-[14.2rem]">Technicians & Staff</p>
+          </div>
+          <div className="ml-[13.3rem]">
+            <p className="mb-[1rem] w-[14.2rem]">Careers</p>
+            <p className="mb-[1rem] w-[14.2rem]">Journal</p>
+            <p className="mb-[1rem] w-[14.2rem]">FAQ</p>
+            <p className="mb-[1rem] w-[14.2rem]">Press</p>
+          </div>
         </div>
         <div className="flex py-[1.9rem] border-t border-white">
-  <p className="ml-[3.4rem] w-[14.2rem]">©2022 GOODVETS</p>
-  <p className="ml-[40.8rem] w-[14.2rem]">Terms & Legal</p>
-  <p className="ml-[13.3rem] w-[14.2rem]">Privacy Policy</p>
-  <div className="flex space-x-[2rem] ml-[13.3rem] ">
-    <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
-    <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
-    <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
-    <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
-  </div>
-</div>
+          <p className="ml-[3.4rem] w-[14.2rem]">©2022 GOODVETS</p>
+          <p className="ml-[40.8rem] w-[14.2rem]">Terms & Legal</p>
+          <p className="ml-[13.3rem] w-[14.2rem]">Privacy Policy</p>
+          <div className="flex space-x-[2rem] ml-[13.3rem] ">
+            <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
+            <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
+            <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
+            <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
+          </div>
+        </div>
       </footer>
     </>
   );
