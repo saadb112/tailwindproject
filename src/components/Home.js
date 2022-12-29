@@ -2,7 +2,19 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect } from "react";
+import { useRef } from "react";
+import Bg from "../img/main.jpg"
+import Slider1 from "../img/bg1.jpg"
+import Slider2 from "../img/bg2.jpg"
+import Review1 from "../img/review1.jpg"
+import Review2 from "../img/review2.jpg"
+import Ho1 from "../img/ho1.jpg"
+import Ho2 from "../img/ho2.jpg"
+import Ho3 from "../img/ho3.jpg"
+
 const Home = () => {
+  const [element, setCard] = useState(null)
   const [left, setleft] = useState(0.0);
   const [prev, setprev] = useState(0.0);
   const Prev = () => {
@@ -23,12 +35,58 @@ const Home = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 3,
+    slidesToScroll: 2,
+  };
+  const reviews = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
     slidesToScroll: 1,
   };
+// const elementRef = useRef(null)
+
+
+//   const [isDown, setisDown] = useState(false)
+//   const [startx, setstartx] = useState(null)
+//   const [scollleft, setscollleft] = useState(null)
+//   const [x, setx] = useState(null)
+//   const [walk, setwalk] = useState(null)
+//   useEffect(() => {
+ 
+//     setCard(elementRef.current)
+    
+//     console.log(element)
+//   }, [])
+  
+
+// const mousedown = (e)=>{
+//   setisDown(true)
+
+//   setstartx(e.pageX - element.offsetLeft)
+//   setscollleft(element.scrollLeft)
+//   console.log(e.pageX)
+// console.log(element.scrollLeft)
+// }
+// const mouseleave = (e)=>{
+//   setisDown(false)
+// }
+// const mouseup = (e)=>{
+//   setisDown(false)
+
+
+// }
+// const mousemove = (e)=>{
+//   if(!isDown) return
+//   e.preventDefault()
+//   setx(e.pageX - element.offsetLeft)
+//   setwalk(x - startx)
+//   element.scrollLeft = scollleft - walk
+// }
   return (
     <>
       {/* -------------OVERLAY----------------- */}
-      <section className="w-[100%] bg-[rgba(38,38,38,0.25)] absolute  z-[100]">
+      <section className="w-[100%] bg-[rgba(38,38,38,0.25)] absolute hidden z-[100]">
 
       <div className="bg-[#FAF6F4] w-[45.1rem] pt-[4.9rem] relative">
 <div className="w-[3rem] h-[3rem] border border-black rounded-full absolute top-[2rem] right-[2rem]">
@@ -89,7 +147,7 @@ const Home = () => {
       </div>
       </section>
 
-      <section className="main bg-slate-500 h-[62.2rem]">
+      <section className="main bg-slate-500 h-[62.2rem] bg-cover bg-center" style={{background : ` rgb(38, 38, 38, 0.2) url(${Bg}) `, backgroundBlendMode: "darken"}}>
         <header className="border-b border-white">
           <nav className="flex justify-between items-center">
             <h1 className="font-bold text-4xl ml-[3.4rem] my-8 text-white">
@@ -123,7 +181,7 @@ const Home = () => {
             <br /> Invested in You
           </h1>
         </div>
-        <button className="text-[1.4rem] leading-[2rem] text-[#262626] w-[21.3rem] h-[5rem] bg-[#FEC20D] rounded-[5rem] absolute right-[3.5rem] top-[65.8rem] hover:bg-[#262626] hover:text-white">
+        <button className="text-[1.4rem] leading-[2rem] text-[#262626] w-[21.3rem] h-[5rem] bg-[#FEC20D] rounded-[5rem] fixed z-10 right-[3.5rem] top-[65.8rem] hover:bg-[#262626] hover:text-white">
           VIEW OPPORTUNITIES
         </button>
       </section>
@@ -154,12 +212,12 @@ const Home = () => {
               Next
             </button>
           </div>
-          <div className="rows flex max-w-[136.6rem] overflow-hidden">
+          <div className="rows flex max-w-[100%] overflow-hidden">
             <div
               className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
               style={{ position: "relative", left: `${left}%` }}
             >
-              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]"></div>
+              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem]  rounded-[6px]" style={{background : `url(${Slider1})`, backgroundSize : "cover", backgroundPosition : "center"}}></div>
               <div className="r2 mx-[3.9rem] flex flex-col justify-center items-start text-[#282826]">
                 <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
                   Veterinarian-Led <br /> Medicine
@@ -175,7 +233,7 @@ const Home = () => {
               className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
               style={{ position: "relative", left: `${left}%` }}
             >
-              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]"></div>
+              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]" style={{background : `url(${Ho3})`, backgroundSize : "cover", backgroundPosition : "center"}}></div>
               <div className="r2 mx-[3.9rem] flex flex-col justify-center items-start text-[#282826]">
                 <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
                   Mentorship From Our <br /> Chief Medical Officer
@@ -206,7 +264,7 @@ const Home = () => {
               className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
               style={{ position: "relative", left: `${left}%` }}
             >
-              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]"></div>
+              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]" style={{background : `url(${Slider2})`, backgroundSize : "cover", backgroundPosition : "center"}}></div>
               <div className="r2 mx-[3.9rem] flex flex-col justify-center items-start text-[#282826]">
                 <h1 className=" text-[4rem] leading-[4.8rem] font-semibold mb-8 ">
                   Professional & <br /> Performance Coaching
@@ -222,10 +280,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="h-[81.6rem] bg-[#FAF6F4] mt-[-3rem]">
-        <div>
-          <div className="flex flex-col justify-start items-center relative">
-            <div className="h-[24.3rem] w-[25.2rem] bg-slate-500 rounded-[100%] relative top-[14rem] z-10"></div>
+      <section className="h-[81.6rem] bg-[#FAF6F4] mt-[-3rem] ">
+        <div className=" max-w-[124.3rem] h-[100%]">
+
+        <Slider  {...reviews}>
+          <div className=" h-[81.6rem] flex-col start-center items-center relative reviews" >
+            <div className="h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative top-[14rem] z-10" style={{background : `url(${Review1})`, backgroundPosition : "center", backgroundSize : "cover"}}></div>
             <div className="w-[107.7rem] bg-[rgba(154,217,183,0.25)] h-[37.3rem] flex flex-col justify-start pt-[10rem] items-center absolute top-[30.3rem]">
               <p className="font-semibold text-center text-[4rem] leading-[4.8rem] text-[#282826] w-[85.7rem]">
                 “GoodVets has fulfilled my wants and needs as an owner and Vet.
@@ -236,7 +296,33 @@ const Home = () => {
               </p>
             </div>
           </div>
+          <div className="flex flex-col justify-start items-center relative reviews" >
+            <div className="h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative top-[14rem] z-10" style={{background : `url(${Review2})`, backgroundPosition : "center", backgroundSize : "cover"}}></div>
+            <div className="w-[107.7rem] bg-[rgba(115,134,230,0.25)] h-[37.3rem] flex flex-col justify-start pt-[10rem] items-center absolute top-[30.3rem]">
+              <p className="font-semibold text-center text-[4rem] leading-[4.8rem] text-[#282826] w-[85.7rem]">
+                “GoodVets has fulfilled my wants and needs as an owner and Vet.
+                I am living my best life.“
+              </p>
+              <p className="text-[1.4rem] text-[#262626] text-center uppercase mt-[4rem]">
+                DR. SCHAUER - MEDICAL DIRECTOR <br /> STREETERVILLE
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col justify-start items-center relative reviews" >
+            <div className="h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative top-[14rem] z-10" style={{background : `url(${Review1})`, backgroundPosition : "center", backgroundSize : "cover"}}></div>
+            <div className="w-[107.7rem] bg-[rgba(154,217,183,0.25)] h-[37.3rem] flex flex-col justify-start pt-[10rem] items-center absolute top-[30.3rem]">
+              <p className="font-semibold text-center text-[4rem] leading-[4.8rem] text-[#282826] w-[85.7rem]">
+                “GoodVets has fulfilled my wants and needs as an owner and Vet.
+                I am living my best life.“
+              </p>
+              <p className="text-[1.4rem] text-[#262626] text-center uppercase mt-[4rem]">
+                DR. SCHAUER - MEDICAL DIRECTOR <br /> STREETERVILLE
+              </p>
+            </div>
+          </div>
+        </Slider>
         </div>
+
       </section>
 
       <section className="flex flex-col justify-center items-center">
@@ -246,7 +332,7 @@ const Home = () => {
         </h1>
         <div className="rows">
           <div className="row1 flex justify-center mt-[4rem]">
-            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[6px] relative">
+            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-500 rounded-[6px] relative" style={{background : `url(${Ho1})`, backgroundPosition : "center", backgroundSize : "cover"}}>
               <div className="w-[22.4rem] h-[21.6rem] bg-[#D9C7B8] rounded-[100%] absolute right-[-10rem] top-[-10rem] text-[10rem] flex justify-center items-center">
                 1
               </div>
@@ -263,7 +349,7 @@ const Home = () => {
             </div>
           </div>
           <div className="row1 flex justify-center mt-[20rem] flex-row-reverse">
-            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[6px] relative">
+            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[6px] relative" style={{background : `url(${Ho2})`, backgroundPosition : "center", backgroundSize : "cover"}}>
               <div className="w-[22.4rem] h-[21.6rem] bg-[#D9C7B8] rounded-[100%] absolute left-[-10rem] top-[-10rem] text-[10rem] flex justify-center items-center">
                 2
               </div>
@@ -281,7 +367,7 @@ const Home = () => {
             </div>
           </div>
           <div className="row1 flex justify-center mt-[20rem]">
-            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[6px] relative">
+            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[6px] relative" style={{background : `url(${Ho3})`, backgroundPosition : "center", backgroundSize : "cover"}}>
               <div className="w-[22.4rem] h-[21.6rem] bg-[#D9C7B8] rounded-[100%] absolute right-[-10rem] top-[-10rem] text-[10rem] flex justify-center items-center">
                 3
               </div>
@@ -336,7 +422,7 @@ const Home = () => {
         <h1 className="text-[7rem] leading-[8rem] text-center py-[10rem]">
           Associate Vets Benefits
         </h1>
-        <div className="ml-[4.1rem] flex">
+        <div className="mx-auto  w-[129.7rem] flex justify-between items-start">
           <div>
             <div className="h-[1.8rem] w-[8.2rem] bg-[#FEC20D]">
               <h1 className="font-semibold text-[1.4rem] leading-[1.8rem] relative top-[-.6rem] left-[-.8rem] text-[#282826]">
@@ -359,7 +445,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="ml-[2.3rem]">
+          <div className="">
             <div className="h-[1.8rem] w-[20rem] bg-[#FEC20D]">
               <h1 className="font-semibold text-[1.4rem] leading-[1.8rem] relative top-[-.6rem] left-[-.8rem] text-[#282826]">
                 QUALITY OF CARE & CAREER
@@ -383,7 +469,7 @@ const Home = () => {
               </h1>
             </div>
           </div>
-          <div className="ml-[2.3rem]">
+          <div className="">
             <div className="h-[1.8rem] w-[20rem] bg-[#FEC20D]">
               <h1 className="font-semibold text-[1.4rem] leading-[1.8rem] relative top-[-.6rem] left-[-.8rem] text-[#282826]">
                 QUALITY OF LIFE
@@ -489,7 +575,7 @@ const Home = () => {
           <span className="text-yellow-500"> Good Stories </span>
           from GoodVets
         </h1>
-        <div className=" GStories max-w-[127.7rem]">
+        <div className=" GStories max-w-[127.7rem]" id="cards" >
           <Slider {...settings}>
             <div className=" h-[58.4rem] bg-white w-[41.7rem]">
               <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>

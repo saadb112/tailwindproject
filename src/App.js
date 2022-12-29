@@ -1,7 +1,7 @@
 
 import './App.css';
 import './input.css';
-// import './responsive.css';
+import './responsive.css';
 import Home from './components/Home';
 
 

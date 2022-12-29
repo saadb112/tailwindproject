@@ -11,8 +11,19 @@ html{
 }
 .GStories .slick-slider .slick-list .slick-track .slick-slide{
   margin-right: 7.8rem;
+  /* margin-right: 2.3rem; */
+
 }
 .Modular .slick-slider .slick-list .slick-track .slick-slide{
   margin-right: 2.3rem;
-
+}
+/* .reviews .slick-slider{
+height: 100%;
+} */
+.reviews{
+  display: flex !important;
+}
+.reviews div{
+  background-position: center;
+  background-size: cover;
 }
