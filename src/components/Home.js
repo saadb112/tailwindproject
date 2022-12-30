@@ -12,6 +12,20 @@ import Review2 from "../img/review2.jpg"
 import Ho1 from "../img/ho1.jpg"
 import Ho2 from "../img/ho2.jpg"
 import Ho3 from "../img/ho3.jpg"
+import One from "../img/01.jpg"
+import two from "../img/02.jpg"
+import three from "../img/03.jpg"
+import four from "../img/04.jpg"
+import five from "../img/05.jpg"
+import six from "../img/06.jpg"
+import seven from "../img/07.jpg"
+import eight from "../img/08.jpg"
+import Blob1 from "../img/blob-1.svg"
+import Blob2 from "../img/blob-2.svg"
+import Blob3 from "../img/blob-3.svg"
+import Search from "../img/Search.png"
+import arrow from "../img/arrow.svg"
+import Logo from "../img/logo.svg"
 
 const Home = () => {
   const [element, setCard] = useState(null)
@@ -150,23 +164,24 @@ const Home = () => {
       <section className="main bg-slate-500 h-[62.2rem] bg-cover bg-center" style={{background : ` rgb(38, 38, 38, 0.2) url(${Bg}) `, backgroundBlendMode: "darken"}}>
         <header className="border-b border-white">
           <nav className="flex justify-between items-center ">
-            <h1 className="font-bold text-4xl ml-[3.4rem] my-8 text-white geographr ">
+            <img src={Logo} alt="" className="ml-[3.4rem] my-8 w-[16.5rem] h-[3.4rem]"/>
+            {/* <h1 className="font-bold text-4xl ml-[3.4rem] my-8 text-white geographr ">
               GoodVets
-            </h1>
-            <ul className="  flex justify-end mr-[6rem] text-white items-center pt-[2.6rem] pb-[2.8rem]">
-              <li className=" text-[1.4rem] leading-8 uppercase mr-[7.1rem]">
+            </h1> */}
+            <ul className="  flex justify-end mr-[6rem] text-white items-center">
+              <li className="my-[2.7rem] text-[1.4rem] leading-8 uppercase mr-[7.1rem]">
                 Locations
               </li>
-              <li className="geographr text-[1.4rem] leading-8 uppercase mr-[6.5rem]">
+              <li className="my-[2.7rem] geographr text-[1.4rem] leading-8 uppercase mr-[6.5rem]">
                 Services
               </li>
-              <li className="geographr text-[1.4rem] leading-8 uppercase mr-[6.3rem]">
+              <li className="my-[2.7rem] geographr text-[1.4rem] leading-8 uppercase mr-[6.3rem]">
                 Wellness Plans
               </li>
-              <li className=" geographr text-[1.4rem] leading-8 uppercase mr-[6rem]">
+              <li className=" my-[2.7rem] geographr text-[1.4rem] leading-8 uppercase mr-[6rem]">
                 Join Us
               </li>
-              <li className="geographr text-[1.4rem] leading-8 uppercase  w-56 flex justify-center items-center border rounded-3xl py-1.5 border-white">
+              <li className="my-[2.7rem] geographr text-[1.4rem] leading-8 uppercase  w-56 flex justify-center items-center border rounded-3xl py-1.5 border-white">
                 Book Now
               </li>
             </ul>
@@ -176,7 +191,7 @@ const Home = () => {
           <p className="geographm text-[1.4rem] mt-[13.8rem] mb-8 w-[16rem] bg-yellow-500  h-[1.8rem] uppercase text-center ">
             Associative Vets
           </p>
-          <h1 className="text-[7rem]  text-center text-white leading-[8rem] ">
+          <h1 className="text-[7rem] tracking-[-.14rem] text-center text-white leading-[8rem] ">
             A Vet-Owned Hospital,
             <br /> Invested in You
           </h1>
@@ -203,13 +218,14 @@ const Home = () => {
               className="p-[1rem] border border-black rounded-full h-[5rem] w-[5rem] hover:bg-[#FEC20D] hover:border-transparent"
               onClick={Prev}
             >
-              Prev
+              <img src={arrow} alt="" className="rotate-90" />
             </button>
             <button
               className="p-[1rem] border border-black rounded-full h-[5rem] w-[5rem] hover:bg-[#FEC20D] hover:border-transparent"
               onClick={Next}
             >
-              Next
+                          <img src={arrow} alt="" className="-rotate-90" />
+
             </button>
           </div>
           <div className="rows flex max-w-[100%] overflow-hidden">
@@ -280,12 +296,17 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="h-[81.6rem] bg-[#FAF6F4] mt-[-3rem] ">
-        <div className=" max-w-[124.3rem] h-[100%]">
+      <section className="h-[81.6rem] bg-[#FAF6F4] ">
+        <div className="m-auto max-w-[124.3rem] h-[100%]">
 
         <Slider  {...reviews}>
           <div className=" h-[81.6rem] flex-col start-center items-center relative reviews" >
-            <div className="h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative top-[14rem] z-10" style={{background : `url(${Review1})`, backgroundPosition : "center", backgroundSize : "cover"}}></div>
+            <div className="h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative top-[14rem] z-10" style={{background : ` url(${Blob1}), url(${Review1}) `,backgroundBlendMode : "multiply",  backgroundPosition : "center", backgroundSize : "cover"}}>
+
+
+            </div>
+
+            
             <div className="w-[107.7rem] bg-[rgba(154,217,183,0.25)] h-[37.3rem] flex flex-col justify-start pt-[10rem] items-center absolute top-[30.3rem]">
               <p className="geographm  text-center text-[4rem] leading-[4.8rem] text-[#282826] w-[85.7rem]">
                 “GoodVets has fulfilled my wants and needs as an owner and Vet.
@@ -333,8 +354,9 @@ const Home = () => {
         <div className="rows">
           <div className="row1 flex justify-center mt-[4rem]">
             <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-500 rounded-[6px] relative" style={{background : `url(${Ho1})`, backgroundPosition : "center", backgroundSize : "cover"}}>
-              <div className="w-[22.4rem] h-[21.6rem] bg-[#D9C7B8] rounded-[100%] absolute right-[-10rem] top-[-10rem] text-[10rem] flex justify-center items-center">
-                1
+              <div className="w-[22.4rem] h-[21.6rem]  absolute right-[-10rem] top-[-10rem] flex justify-center items-center">
+                <p className="text-[#262626] absolute top-[4.2rem] left-[4.1rem]  text-[10rem] leading-[8rem] tracking-[-.2rem] w-[14.2rem] h-[13.2rem] flex justify-center items-center">1</p>
+              <img src={Blob1} alt="" />
               </div>
             </div>
             <div className="r2 mx-[3.9rem] flex flex-col justify-end pb-[6rem] items-start text-[#282826]">
@@ -350,8 +372,9 @@ const Home = () => {
           </div>
           <div className="row1 flex justify-center mt-[20rem] flex-row-reverse">
             <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[6px] relative" style={{background : `url(${Ho2})`, backgroundPosition : "center", backgroundSize : "cover"}}>
-              <div className="w-[22.4rem] h-[21.6rem] bg-[#D9C7B8] rounded-[100%] absolute left-[-10rem] top-[-10rem] text-[10rem] flex justify-center items-center">
-                2
+            <div className="w-[22.4rem] h-[21.6rem]  absolute left-[-10rem] top-[-10rem] flex justify-center items-center">
+                <p className="text-[#262626] absolute top-[4.2rem] left-[4.1rem]  text-[10rem] leading-[8rem] tracking-[-.2rem] w-[14.2rem] h-[13.2rem] flex justify-center items-center">2</p>
+              <img src={Blob2} alt="" />
               </div>
             </div>
             <div className="r2 mx-[3.9rem] flex flex-col justify-end pb-[6rem] items-start text-[#282826]">
@@ -368,8 +391,9 @@ const Home = () => {
           </div>
           <div className="row1 flex justify-center mt-[20rem]">
             <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[6px] relative" style={{background : `url(${Ho3})`, backgroundPosition : "center", backgroundSize : "cover"}}>
-              <div className="w-[22.4rem] h-[21.6rem] bg-[#D9C7B8] rounded-[100%] absolute right-[-10rem] top-[-10rem] text-[10rem] flex justify-center items-center">
-                3
+            <div className="w-[22.4rem] h-[21.6rem]  absolute right-[-10rem] top-[-10rem] flex justify-center items-center">
+                <p className="text-[#262626] absolute top-[4.2rem] left-[4.1rem]  text-[10rem] leading-[8rem] tracking-[-.2rem] w-[14.2rem] h-[13.2rem] flex justify-center items-center">3</p>
+              <img src={Blob3} alt="" />
               </div>
             </div>
             <div className="r2 mx-[3.9rem] flex flex-col justify-end pb-[6rem] items-start text-[#282826]">
@@ -396,22 +420,22 @@ const Home = () => {
         <h1 className="geographm text-[4rem]  leading-[4.8rem] pt-[10rem] mb-[10rem] text-[#262626] w-screen pl-[8.9rem]">
           Modular
         </h1>
-        <div className="max-w-[124.3rem] Modular">
+        <div className="max-w-[127.7rem] Modular">
           <Slider {...settings}>
             <div className="w-[58.2rem]">
-              <div className="w-[100] h-[40rem] bg-slate-400 m-0"></div>
+              <div className="w-[100] h-[40rem] bg-slate-400 m-0" style={{background : `url(${five})`, backgroundSize : "cover"}}></div>
               <p className="geographr text-[1.4rem] mt-[2rem]">Image Caption</p>
             </div>
             <div className="w-[58.2rem]">
-              <div className="w-[100] h-[40rem] bg-slate-400 m-0"></div>
+              <div className="w-[100] h-[40rem] bg-slate-400 m-0" style={{background : `url(${six})`, backgroundSize : "cover"}}></div>
               <p className="geographr text-[1.4rem] mt-[2rem]">Image Caption</p>
             </div>
             <div className="w-[58.2rem]">
-              <div className="w-[100] h-[40rem] bg-slate-400 m-0"></div>
+              <div className="w-[100] h-[40rem] bg-slate-400 m-0" style={{background : `url(${seven})`, backgroundSize : "cover"}}></div>
               <p className=" geographr text-[1.4rem] mt-[2rem]">Image Caption</p>
             </div>
             <div className="w-[58.2rem]">
-              <div className="w-[100%] h-[40rem] bg-slate-400 m-0"></div>
+              <div className="w-[100%] h-[40rem] bg-slate-400 m-0" style={{background : `url(${eight})`, backgroundSize : "cover"}}></div>
               <p className="geographr text-[1.4rem] mt-[2rem]">Image Caption</p>
             </div>
           </Slider>
@@ -507,7 +531,10 @@ const Home = () => {
             <p className="geographr text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
               Nashville, TN
             </p>
-            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
+            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
+            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+
+            </p>
           </div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
             <h1 className="geographm text-[1.8rem] leading-[2.4rem] text-[#282826]  w-[43.6rem]">
@@ -516,7 +543,10 @@ const Home = () => {
             <p className="geographr text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
               Chicago, IL
             </p>
-            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
+            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
+            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+
+            </p>
           </div>
           <div className=" h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
             <h1 className="geographm text-[1.8rem] leading-[2.4rem] text-[#282826]  w-[43.6rem]">
@@ -525,7 +555,10 @@ const Home = () => {
             <p className="geographr text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
               Miami, FL
             </p>
-            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
+            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
+            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+
+            </p>
           </div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
             <h1 className="geographm text-[1.8rem] leading-[2.4rem] text-[#282826]  w-[43.6rem]">
@@ -534,7 +567,10 @@ const Home = () => {
             <p className="geographr text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
               Miami, FL
             </p>
-            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
+            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
+            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+
+            </p>
           </div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
             <h1 className="geographm text-[1.8rem] leading-[2.4rem] text-[#282826]  w-[43.6rem]">
@@ -543,7 +579,10 @@ const Home = () => {
             <p className="geographr text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
               Nashville, TN
             </p>
-            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
+            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
+            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+
+            </p>
           </div>
           <div className="= h-[6rem] w-[118.7rem] flex bg-white justify-center items-center my-[1rem]">
             <h1 className="geographm text-[1.8rem] leading-[2.4rem] text-[#282826]  w-[43.6rem]">
@@ -552,7 +591,10 @@ const Home = () => {
             <p className="geographr text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
               Chicago, IL
             </p>
-            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
+            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
+            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+
+            </p>
           </div>
           <div className="h-[6rem] w-[118.7rem] flex bg-white justify-center items-center mt-[8rem]">
             <h1 className="geographm text-[1.8rem] leading-[2.4rem] text-[#282826]  w-[43.6rem]">
@@ -561,7 +603,10 @@ const Home = () => {
             <p className="geographr text-[1.4rem] leading-[1.8rem] ml-[33.6rem] w-[25.2rem] mr-[4.8rem]">
               Miami, FL
             </p>
-            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center"></p>
+            <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
+            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+
+            </p>
           </div>
         </div>
 
@@ -572,13 +617,13 @@ const Home = () => {
 
       <section className="bg-[#FAF6F4] pt-[9.9rem] pb-[10rem] flex flex-col justify-center items-end">
         <h1 className="geographm text-[7rem] mx-auto mb-[9rem] leading-[8rem]  text-left w-screen pl-[8.9rem]">
-          <span className="text-yellow-500"> Good Stories </span>
+          <span className="geographm text-yellow-500"> Good Stories </span>
           from GoodVets
         </h1>
         <div className=" GStories max-w-[127.7rem]" id="cards" >
           <Slider {...settings}>
             <div className=" h-[58.4rem] bg-white w-[41.7rem]">
-              <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
+              <div className="w-[41.7rem] h-[40rem] bg-center bg-cover"  style={{background : `url(${One})`, backgroundSize : "cover"}}></div>
               <p className="grennetesm text-[2.2rem] leading-[2.9rem]  mt-[3rem] ml-[2rem] w-[34.3rem]">
                 How to build a successful career in the veterinary industry.
               </p>
@@ -588,7 +633,7 @@ const Home = () => {
               </p>
             </div>
             <div className=" h-[58.4rem] bg-white w-[41.7rem]">
-              <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
+              <div className="w-[41.7rem] h-[40rem] bg-slate-400"  style={{background : `url(${two})`, backgroundSize : "cover"}}></div>
               <p className=" grennetesm text-[2.2rem] leading-[2.9rem]  mt-[3rem] ml-[2rem] w-[34.3rem]">
                 Dr. Sheela Moss on how being a mentor enriches her career.
               </p>
@@ -598,7 +643,7 @@ const Home = () => {
               </p>
             </div>
             <div className=" h-[58.4rem] bg-white w-[41.7rem]">
-              <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
+              <div className="w-[41.7rem] h-[40rem] bg-slate-400"  style={{background : `url(${three})`, backgroundSize : "cover"}}></div>
               <p className="grennetesm text-[2.2rem] leading-[2.9rem]  mt-[3rem] ml-[2rem] w-[34.3rem]">
                 Dr. Sheela Moss on how being a mentor enriches her career.
               </p>
@@ -608,7 +653,7 @@ const Home = () => {
               </p>
             </div>
             <div className=" h-[58.4rem] bg-white w-[41.7rem]">
-              <div className="w-[41.7rem] h-[40rem] bg-slate-400"></div>
+              <div className="w-[41.7rem] h-[40rem] bg-slate-400"  style={{background : `url(${four})`, backgroundSize : "cover"}}></div>
               <p className="grennetesm text-[2.2rem] leading-[2.9rem]  mt-[3rem] ml-[2rem] w-[34.3rem]">
                 Dr. Sheela Moss on how being a mentor enriches her career.
               </p>
@@ -642,11 +687,15 @@ const Home = () => {
           {/* <h1 className="text-[2.2rem] leading-[2.9rem]  text-[#262626]">
             Enter your email
           </h1> */}
+          <div className=" w-[100%] flex justify-between items-end relative">
+
           <input
             type="text "
-            className="geographr text-[2.2rem] leading-[2.9rem]  w-[100%] hover:placeholder:text-[#FEC20D] outline-none"
+            className="geographm text-[2.2rem] leading-[2.9rem]  w-[80%] hover:placeholder:text-[#FEC20D] outline-none placeholder:text-[#262626]"
             placeholder="Enter Your Email"
-          />
+            />
+            <img src={Search} alt="" className="w-[20.3rem] h-[20.3rem] absolute right-[0] top-[-14rem]"/>
+            </div>
         </div>
       </section>
 
