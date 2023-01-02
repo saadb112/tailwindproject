@@ -169,19 +169,19 @@ const Home = () => {
               GoodVets
             </h1> */}
             <ul className="  flex justify-end mr-[6rem] text-white items-center">
-              <li className="my-[2.7rem] text-[1.4rem] leading-8 uppercase mr-[7.1rem]">
+              <li className="mt-[2.6rem] mb-[2.8rem] geographr text-[1.4rem] leading-8 uppercase mr-[7.1rem]">
                 Locations
               </li>
-              <li className="my-[2.7rem] geographr text-[1.4rem] leading-8 uppercase mr-[6.5rem]">
+              <li className="mt-[2.6rem] mb-[2.8rem] geographr text-[1.4rem] leading-8 uppercase mr-[6.5rem]">
                 Services
               </li>
-              <li className="my-[2.7rem] geographr text-[1.4rem] leading-8 uppercase mr-[6.3rem]">
+              <li className="mt-[2.6rem] mb-[2.8rem] geographr text-[1.4rem] leading-8 uppercase mr-[6.3rem]">
                 Wellness Plans
               </li>
-              <li className=" my-[2.7rem] geographr text-[1.4rem] leading-8 uppercase mr-[6rem]">
+              <li className=" mt-[2.6rem] mb-[2.8rem] geographr text-[1.4rem] leading-8 uppercase mr-[6rem]">
                 Join Us
               </li>
-              <li className="my-[2.7rem] geographr text-[1.4rem] leading-8 uppercase  w-56 flex justify-center items-center border rounded-3xl py-1.5 border-white">
+              <li className="mt-[2.6rem] mb-[2.8rem] geographr text-[1.4rem] leading-8 uppercase  w-56 flex justify-center items-center border rounded-3xl py-1.5 border-white">
                 Book Now
               </li>
             </ul>
@@ -213,7 +213,7 @@ const Home = () => {
           A Culture of <span className="text-yellow-500"> Mentorship</span>
         </h1>
         <div className="relative flex justify-center items-center flex-col">
-          <div className="absolute w-[94.8%] z-10  flex justify-between items-center top-[18rem] ">
+          <div className="absolute w-[100%] z-10 pr-[3.5rem] pl-[2.5rem] flex justify-between items-center top-[18rem] ">
             <button
               className="p-[1rem] border border-black rounded-full h-[5rem] w-[5rem] hover:bg-[#FEC20D] hover:border-transparent"
               onClick={Prev}
@@ -230,7 +230,7 @@ const Home = () => {
           </div>
           <div className="rows flex max-w-[100%] overflow-hidden">
             <div
-              className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
+              className={`row1 ml-[5rem] flex justify-start min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
               style={{ position: "relative", left: `${left}%` }}
             >
               <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem]  rounded-[6px]" style={{background : `url(${Slider1})`, backgroundSize : "cover", backgroundPosition : "center"}}></div>
@@ -246,7 +246,7 @@ const Home = () => {
               </div>
             </div>
             <div
-              className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
+              className={`row1 flex justify-start min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
               style={{ position: "relative", left: `${left}%` }}
             >
               <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]" style={{background : `url(${Ho3})`, backgroundSize : "cover", backgroundPosition : "center"}}></div>
@@ -262,7 +262,7 @@ const Home = () => {
               </div>
             </div>
             <div
-              className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
+              className={`row1 flex justify-start min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
               style={{ position: "relative", left: `${left}%` }}
             >
               <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]"></div>
@@ -277,7 +277,7 @@ const Home = () => {
               </div>
             </div>
             <div
-              className={`row1 flex justify-center min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
+              className={`row1 flex justify-start min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
               style={{ position: "relative", left: `${left}%` }}
             >
               <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]" style={{background : `url(${Slider2})`, backgroundSize : "cover", backgroundPosition : "center"}}></div>
@@ -297,50 +297,54 @@ const Home = () => {
       </section>
 
       <section className="h-[81.6rem] bg-[#FAF6F4] ">
-        <div className="m-auto max-w-[124.3rem] h-[100%]">
+        <div className="m-auto w-[100%] h-[100%] Review ">
 
         <Slider  {...reviews}>
-          <div className=" h-[81.6rem] flex-col start-center items-center relative reviews" >
-            <div className="h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative top-[14rem] z-10" style={{background : ` url(${Blob1}), url(${Review1}) `,backgroundBlendMode : "multiply",  backgroundPosition : "center", backgroundSize : "cover"}}>
-
-
-            </div>
+          <div className="  flex-col start-center items-center relative reviews top-[30.3rem] max-w-[107.7rem] ml-[14.4rem] mr-[7rem]" >
 
             
-            <div className="w-[107.7rem] bg-[rgba(154,217,183,0.25)] h-[37.3rem] flex flex-col justify-start pt-[10rem] items-center absolute top-[30.3rem]">
-              <p className="geographm  text-center text-[4rem] leading-[4.8rem] text-[#282826] w-[85.7rem]">
+            <div className="w-[107.7rem] bg-[#E2EEE5] h-[37.3rem] flex flex-col justify-end items-center ">
+            <div className="min-h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative  z-10" style={{background : ` url(${Blob1}), url(${Review1}) `,backgroundBlendMode : "multiply",  backgroundPosition : "center", backgroundSize : "cover"}}> </div>
+
+              <p className="geographm mt-[2rem] text-center text-[4rem] leading-[4.99rem] text-[#282826] w-[85.7rem] ">
                 “GoodVets has fulfilled my wants and needs as an owner and Vet.
                 I am living my best life.“
               </p>
-              <p className="geographr text-[1.4rem] text-[#262626] text-center uppercase mt-[4rem]">
+              <p className="geographr text-[1.4rem] text-[#262626] text-center uppercase mt-[4rem] mb-[9.6rem]">
                 DR. SCHAUER - MEDICAL DIRECTOR <br /> STREETERVILLE
               </p>
             </div>
           </div>
-          <div className="flex flex-col justify-start items-center relative reviews" >
-            <div className="h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative top-[14rem] z-10" style={{background : `url(${Review2})`, backgroundPosition : "center", backgroundSize : "cover"}}></div>
-            <div className="w-[107.7rem] bg-[rgba(115,134,230,0.25)] h-[37.3rem] flex flex-col justify-start pt-[10rem] items-center absolute top-[30.3rem]">
-              <p className="geographm text-center text-[4rem] leading-[4.8rem] text-[#282826] w-[85.7rem]">
-                “GoodVets has fulfilled my wants and needs as an owner and Vet.
-                I am living my best life.“
-              </p>
-              <p className="geographr text-[1.4rem] text-[#262626] text-center uppercase mt-[4rem]">
-                DR. SCHAUER - MEDICAL DIRECTOR <br /> STREETERVILLE
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col justify-start items-center relative reviews" >
-            <div className="h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative top-[14rem] z-10" style={{background : `url(${Review1})`, backgroundPosition : "center", backgroundSize : "cover"}}></div>
-            <div className="w-[107.7rem] bg-[rgba(154,217,183,0.25)] h-[37.3rem] flex flex-col justify-start pt-[10rem] items-center absolute top-[30.3rem]">
-              <p className="geographm text-center text-[4rem] leading-[4.8rem] text-[#282826] w-[85.7rem]">
-                “GoodVets has fulfilled my wants and needs as an owner and Vet.
-                I am living my best life.“
-              </p>
-              <p className="geographr text-[1.4rem] text-[#262626] text-center uppercase mt-[4rem]">
-                DR. SCHAUER - MEDICAL DIRECTOR <br /> STREETERVILLE
-              </p>
-            </div>
-          </div>
+          <div className="  flex-col start-center items-center relative reviews top-[30.3rem] max-w-[107.7rem] mr-[7rem]" >
+
+            
+<div className="w-[107.7rem] bg-[rgba(115,134,230,0.25)] h-[37.3rem] flex flex-col justify-end items-center ">
+<div className="min-h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative  z-10" style={{background : ` url(${Blob1}), url(${Review1}) `,backgroundBlendMode : "multiply",  backgroundPosition : "center", backgroundSize : "cover"}}> </div>
+
+  <p className="geographm mt-[2rem] text-center text-[4rem] leading-[4.99rem] text-[#282826] w-[85.7rem] ">
+    “GoodVets has fulfilled my wants and needs as an owner and Vet.
+    I am living my best life.“
+  </p>
+  <p className="geographr text-[1.4rem] text-[#262626] text-center uppercase mt-[4rem] mb-[9.6rem]">
+    DR. SCHAUER - MEDICAL DIRECTOR <br /> STREETERVILLE
+  </p>
+</div>
+</div>
+          <div className="  flex-col start-center items-center relative reviews top-[30.3rem] max-w-[107.7rem] " >
+
+            
+<div className="w-[107.7rem] bg-[#E2EEE5] h-[37.3rem] flex flex-col justify-end items-center ">
+<div className="min-h-[24.3rem] w-[25.2rem]  rounded-[100%]  relative  z-10" style={{background : ` url(${Blob1}), url(${Review1}) `,backgroundBlendMode : "multiply",  backgroundPosition : "center", backgroundSize : "cover"}}> </div>
+
+  <p className="geographm mt-[2rem] text-center text-[4rem] leading-[4.99rem] text-[#282826] w-[85.7rem] ">
+    “GoodVets has fulfilled my wants and needs as an owner and Vet.
+    I am living my best life.“
+  </p>
+  <p className="geographr text-[1.4rem] text-[#262626] text-center uppercase mt-[4rem] mb-[9.6rem]">
+    DR. SCHAUER - MEDICAL DIRECTOR <br /> STREETERVILLE
+  </p>
+</div>
+</div>
         </Slider>
         </div>
 
@@ -351,10 +355,10 @@ const Home = () => {
           Many Ways to Take
           <span className="text-yellow-500"> Ownership</span>
         </h1>
-        <div className="rows">
+        <div className="rows w-[100%] flex flex-col  justify-center items-start pl-[5rem]">
           <div className="row1 flex justify-center mt-[4rem]">
-            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-500 rounded-[6px] relative" style={{background : `url(${Ho1})`, backgroundPosition : "center", backgroundSize : "cover"}}>
-              <div className="w-[22.4rem] h-[21.6rem]  absolute right-[-10rem] top-[-10rem] flex justify-center items-center">
+            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-500 rounded-[2.4rem] relative" style={{background : `url(${Ho1})`, backgroundPosition : "center", backgroundSize : "cover"}}>
+              <div className="w-[22.4rem] min-h-[21.6rem]  absolute left-[52.2rem] bottom-[24.88rem] flex justify-center items-center">
                 <p className="text-[#262626] absolute top-[4.2rem] left-[4.1rem]  text-[10rem] leading-[8rem] tracking-[-.2rem] w-[14.2rem] h-[13.2rem] flex justify-center items-center">1</p>
               <img src={Blob1} alt="" />
               </div>
@@ -371,8 +375,8 @@ const Home = () => {
             </div>
           </div>
           <div className="row1 flex justify-center mt-[20rem] flex-row-reverse">
-            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[6px] relative" style={{background : `url(${Ho2})`, backgroundPosition : "center", backgroundSize : "cover"}}>
-            <div className="w-[22.4rem] h-[21.6rem]  absolute left-[-10rem] top-[-10rem] flex justify-center items-center">
+            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[2.4rem] relative" style={{background : `url(${Ho2})`, backgroundPosition : "center", backgroundSize : "cover"}}>
+            <div className="w-[22.4rem] h-[21.6rem]  absolute right-[52.2rem] bottom-[24.88rem] flex justify-center items-center">
                 <p className="text-[#262626] absolute top-[4.2rem] left-[4.1rem]  text-[10rem] leading-[8rem] tracking-[-.2rem] w-[14.2rem] h-[13.2rem] flex justify-center items-center">2</p>
               <img src={Blob2} alt="" />
               </div>
@@ -390,8 +394,8 @@ const Home = () => {
             </div>
           </div>
           <div className="row1 flex justify-center mt-[20rem]">
-            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[6px] relative" style={{background : `url(${Ho3})`, backgroundPosition : "center", backgroundSize : "cover"}}>
-            <div className="w-[22.4rem] h-[21.6rem]  absolute right-[-10rem] top-[-10rem] flex justify-center items-center">
+            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[2.4rem] relative" style={{background : `url(${Ho3})`, backgroundPosition : "center", backgroundSize : "cover"}}>
+            <div className="w-[22.4rem] h-[21.6rem]  absolute left-[52.2rem] bottom-[24.88rem] flex justify-center items-center">
                 <p className="text-[#262626] absolute top-[4.2rem] left-[4.1rem]  text-[10rem] leading-[8rem] tracking-[-.2rem] w-[14.2rem] h-[13.2rem] flex justify-center items-center">3</p>
               <img src={Blob3} alt="" />
               </div>
@@ -408,35 +412,35 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <h1 className="text-8xl mx-auto mb-[8rem] mt-[10rem] text-center">
+        <h1 className="text-[7rem] leading-[8rem] mx-auto mb-[8rem] mt-[10rem] text-center">
           Get <span className="text-yellow-500"> Started!</span>
         </h1>
-        <button className="geographr border border-black px-[3rem] py-[1.6rem] text-[1.4rem] leading-[2rem] rounded-[5rem] mx-auto  hover:bg-[#FEC20D] hover:border-[#FEC20D]">
+        <button className="geographr border w-[26rem] h-[5rem] border-black px-[3rem] py-[1.6rem] text-[1.4rem] leading-[2rem] rounded-[5rem] mx-auto  hover:bg-[#FEC20D] hover:border-[#FEC20D]">
           LEARN ABOUT PARTNERSHIP
         </button>
       </section>
 
-      <section className="bg-[rgba(217,199,184,0.25)] mt-[9.9rem] pb-[10rem] flex flex-col items-end">
+      <section className="bg-[#F2EAE5] mt-[9.9rem] pb-[10rem] flex flex-col items-end ">
         <h1 className="geographm text-[4rem]  leading-[4.8rem] pt-[10rem] mb-[10rem] text-[#262626] w-screen pl-[8.9rem]">
           Modular
         </h1>
         <div className="max-w-[127.7rem] Modular">
           <Slider {...settings}>
-            <div className="w-[58.2rem]">
-              <div className="w-[100] h-[40rem] bg-slate-400 m-0" style={{background : `url(${five})`, backgroundSize : "cover"}}></div>
-              <p className="geographr text-[1.4rem] mt-[2rem]">Image Caption</p>
+            <div className="min-w-[58.2rem]">
+              <div className="w-[100%] h-[40rem] bg-slate-400 m-0" style={{background : `url(${five})`, backgroundSize : "cover"}}></div>
+              <p className="geographr text-[1.4rem] mt-[2rem] leading-[1.8rem]">Image Caption</p>
             </div>
-            <div className="w-[58.2rem]">
-              <div className="w-[100] h-[40rem] bg-slate-400 m-0" style={{background : `url(${six})`, backgroundSize : "cover"}}></div>
-              <p className="geographr text-[1.4rem] mt-[2rem]">Image Caption</p>
+            <div className="min-w-[36.2rem]">
+              <div className="w-[100%] h-[40rem] bg-slate-400 m-0" style={{background : `url(${six})`, backgroundSize : "cover"}}></div>
+              <p className="geographr text-[1.4rem] mt-[2rem] leading-[1.8rem]">Image Caption</p>
             </div>
-            <div className="w-[58.2rem]">
-              <div className="w-[100] h-[40rem] bg-slate-400 m-0" style={{background : `url(${seven})`, backgroundSize : "cover"}}></div>
-              <p className=" geographr text-[1.4rem] mt-[2rem]">Image Caption</p>
+            <div className="min-w-[58.2rem]">
+              <div className="w-[100%] h-[40rem] bg-slate-400 m-0" style={{background : `url(${seven})`, backgroundSize : "cover"}}></div>
+              <p className=" geographr text-[1.4rem] mt-[2rem] leading-[1.8rem]">Image Caption</p>
             </div>
-            <div className="w-[58.2rem]">
+            <div className="min-w-[58.2rem]">
               <div className="w-[100%] h-[40rem] bg-slate-400 m-0" style={{background : `url(${eight})`, backgroundSize : "cover"}}></div>
-              <p className="geographr text-[1.4rem] mt-[2rem]">Image Caption</p>
+              <p className="geographr text-[1.4rem] mt-[2rem] leading-[1.8rem]">Image Caption</p>
             </div>
           </Slider>
         </div>
@@ -454,16 +458,16 @@ const Home = () => {
               </h1>
             </div>
             <div className="w-[41.7rem] h-[20rem] bg-white mt-[3.3rem]">
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] pt-[1.6rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem]  flex justify-start items-center">
                 Leading compensation and bonuses
               </h1>
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem] bg-[#fdfbfa] flex justify-start items-center">
                 Annual raises
               </h1>
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem] flex justify-start items-center">
                 401k matching
               </h1>
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem] bg-[#fdfbfa] flex justify-start items-center">
                 Profit sharing
               </h1>
             </div>
@@ -476,19 +480,19 @@ const Home = () => {
               </h1>
             </div>
             <div className="w-[41.7rem] h-[25rem] bg-white mt-[3.3rem]">
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] pt-[1.6rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem]  flex justify-start items-center">
                 Favorable staffing ratios
               </h1>
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem] bg-[#fdfbfa] flex justify-start items-center">
                 Practice medicine alongside hospital owners
               </h1>
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem] flex justify-start items-center">
                 Continuing education & license support
               </h1>
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem] bg-[#fdfbfa] flex justify-start items-center">
                 Hospital-level growth opportunities
               </h1>
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem]  flex justify-start items-center">
                 Best-in-class facilities and technology
               </h1>
             </div>
@@ -500,16 +504,16 @@ const Home = () => {
               </h1>
             </div>
             <div className="w-[41.7rem] h-[20rem] bg-white mt-[3.3rem]">
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] pt-[1.6rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem] flex justify-start items-center">
                 Leading compensation and bonuses
               </h1>
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem] bg-[#fdfbfa] flex justify-start items-center">
                 Annual raises
               </h1>
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem] flex justify-start items-center">
                 401k matching
               </h1>
-              <h1 className="geographr ml-[5.6rem] text-[1.4rem] leading-[1.8rem] mb-[3.2rem]">
+              <h1 className="geographr pl-[5.6rem] text-[1.4rem] leading-[1.8rem] w-[41.7] h-[5rem] bg-[#fdfbfa] flex justify-start items-center">
                 Profit sharing
               </h1>
             </div>
@@ -532,7 +536,7 @@ const Home = () => {
               Nashville, TN
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+           >
 
             </p>
           </div>
@@ -544,7 +548,7 @@ const Home = () => {
               Chicago, IL
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+            >
 
             </p>
           </div>
@@ -556,7 +560,7 @@ const Home = () => {
               Miami, FL
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+            >
 
             </p>
           </div>
@@ -568,7 +572,7 @@ const Home = () => {
               Miami, FL
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+            >
 
             </p>
           </div>
@@ -580,7 +584,7 @@ const Home = () => {
               Nashville, TN
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+            >
 
             </p>
           </div>
@@ -592,7 +596,7 @@ const Home = () => {
               Chicago, IL
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+            >
 
             </p>
           </div>
@@ -604,7 +608,7 @@ const Home = () => {
               Miami, FL
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            <img src={arrow} alt="" className=" h-[1.5rem] -rotate-90" />
+            >
 
             </p>
           </div>
