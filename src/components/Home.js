@@ -32,8 +32,6 @@ import larow from "../img/larrow.svg"
 
 
 const Home = () => {
-  const div = useRef()
-  console.log(div.current)
   const [element, setCard] = useState(null)
   const [left, setleft] = useState(0.0);
   const [prev, setprev] = useState(0.0);
@@ -103,7 +101,32 @@ const Home = () => {
 //   setwalk(x - startx)
 //   element.scrollLeft = scollleft - walk
 // }
+const [isDragging, setIsDragging] = useState(false);
+const sliderRef = useRef(null);
+let startX = 0;
+let scrollLeft = 0;
 
+const handleMouseDown = (e) => {
+  setIsDragging(true);
+  startX = e.pageX - sliderRef.current.offsetLeft;
+  scrollLeft = sliderRef.current.scrollLeft;
+};
+
+const handleMouseUp = () => {
+  setIsDragging(false);
+};
+
+const handleMouseLeave = () => {
+  setIsDragging(false);
+};
+
+const handleMouseMove = (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - sliderRef.current.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  sliderRef.current.scrollLeft = scrollLeft - walk;
+};
   return (
     <>
       {/* -------------OVERLAY----------------- */}
@@ -304,9 +327,14 @@ const Home = () => {
       </section>
 
       <section className="h-[81.6rem] bg-[#FAF6F4] ">
-        <div className="m-auto w-[100%] h-[100%] Review ">
+        <div className= "flex m-auto w-[100%] h-[100%] Review " onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseLeave}
+      onMouseMove={handleMouseMove}
+      ref={sliderRef} 
+      style={{scrollSnapType : "x mandatory", overflowX : "scroll", overflowY : "hidden"}}>
 
-        <Slider  {...reviews}>
+        {/* <Slider  {...reviews}> */}
           <div className="  flex-col start-center items-center relative reviews top-[30.3rem] max-w-[107.7rem] ml-[14.4rem] mr-[7rem]" >
 
             
@@ -352,7 +380,7 @@ const Home = () => {
   </p>
 </div>
 </div>
-        </Slider>
+        {/* </Slider> */}
         </div>
 
       </section>
@@ -639,7 +667,7 @@ const Home = () => {
         </h1>
         <div className=" GStories max-w-[127.7rem]" id="cards" >
           <Slider {...settings}>
-            <div ref={div} className=" h-[58.4rem] bg-white w-[41.7rem] rounded-[.6rem]">
+            <div className=" h-[58.4rem] bg-white w-[41.7rem] rounded-[.6rem]">
               <div className="w-[41.7rem] h-[40rem] bg-center bg-cover relative "  style={{background : `url(${One})`, backgroundSize : "cover", borderRadius : "6px 6px 0 0 "}}>
                 <button className="w-[8.4rem] h-[3rem] bg-transparent border-[.1rem] atlasr border-white rounded-[1.5rem] text-[1.4rem] leading-[2rem] text-white absolute bottom-[2rem] left-[2rem] tracking-[.34px]]">HOW TO</button>
               </div>

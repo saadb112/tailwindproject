@@ -52,7 +52,9 @@ body {
 .slick-next {
   right: 0;
 }
-
+.Review::-webkit-scrollbar{
+  display: none;
+}
 .Review .slick-slider .slick-list .slick-track .slick-slide:nth-child(1) {
   margin-right: 0;
 }
