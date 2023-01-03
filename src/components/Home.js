@@ -638,7 +638,7 @@ const Home = () => {
           from GoodVets
         </h1>
         <div className=" GStories max-w-[127.7rem]" id="cards" >
-          {/* <Slider {...settings}> */}
+          <Slider {...settings}>
             <div ref={div} className=" h-[58.4rem] bg-white w-[41.7rem] rounded-[.6rem]">
               <div className="w-[41.7rem] h-[40rem] bg-center bg-cover relative "  style={{background : `url(${One})`, backgroundSize : "cover", borderRadius : "6px 6px 0 0 "}}>
                 <button className="w-[8.4rem] h-[3rem] bg-transparent border-[.1rem] atlasr border-white rounded-[1.5rem] text-[1.4rem] leading-[2rem] text-white absolute bottom-[2rem] left-[2rem] tracking-[.34px]]">HOW TO</button>
@@ -697,7 +697,7 @@ const Home = () => {
               <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
             </p>
           </div> */}
-          {/* </Slider> */}
+          </Slider>
         </div>
         <button className="geographr border border-black px-[3rem] py-[1.6rem] text-[1.4rem] leading-[2rem] rounded-[5rem] mx-auto mt-[8rem] hover:bg-[#FEC20D] hover:border-[#FEC20D] ">
           MORE GOOD STORIES
