@@ -630,7 +630,7 @@ const Home = () => {
         </button>
       </section>
 
-      <section className="bg-[#FAF6F4] pt-[9.9rem] pb-[10rem] flex flex-col justify-center items-end">
+      <section className="bg-[#FAF6F4] pt-[9.9rem] pb-[14rem] flex flex-col justify-center items-end">
         <h1 className="geographm text-[4rem] mx-auto mb-[8rem] leading-[4.8rem]  text-left w-screen pl-[8.9rem]">
           <span className="geographm text-yellow-500"> Good Stories </span>
           from GoodVets
