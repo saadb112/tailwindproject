@@ -27,6 +27,9 @@ import Search from "../img/Search.png"
 import arrow from "../img/arrow.svg"
 import Logo from "../img/logo.svg"
 import img3 from "../img/img3.jpg"
+import larow from "../img/larrow.svg"
+// import Draggable from 'react-draggable';
+
 
 const Home = () => {
   const [element, setCard] = useState(null)
@@ -56,7 +59,7 @@ const Home = () => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow:1,
     slidesToScroll: 1,
   };
 // const elementRef = useRef(null)
@@ -98,6 +101,7 @@ const Home = () => {
 //   setwalk(x - startx)
 //   element.scrollLeft = scollleft - walk
 // }
+
   return (
     <>
       {/* -------------OVERLAY----------------- */}
@@ -537,7 +541,7 @@ const Home = () => {
               Nashville, TN
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-           >
+            <i class="fa-solid fa-chevron-right text-[#262626] text-[1.4rem]"></i>
 
             </p>
           </div>
@@ -549,7 +553,8 @@ const Home = () => {
               Chicago, IL
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            >
+            <i class="fa-solid fa-chevron-right text-[#262626] text-[1.4rem]"></i>
+
 
             </p>
           </div>
@@ -561,7 +566,8 @@ const Home = () => {
               Miami, FL
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            >
+            <i class="fa-solid fa-chevron-right text-[#262626] text-[1.4rem]"></i>
+
 
             </p>
           </div>
@@ -573,7 +579,8 @@ const Home = () => {
               Miami, FL
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            >
+            <i class="fa-solid fa-chevron-right text-[#262626] text-[1.4rem]"></i>
+
 
             </p>
           </div>
@@ -585,7 +592,8 @@ const Home = () => {
               Nashville, TN
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            >
+            <i class="fa-solid fa-chevron-right text-[#262626] text-[1.4rem]"></i>
+
 
             </p>
           </div>
@@ -597,7 +605,8 @@ const Home = () => {
               Chicago, IL
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            >
+            <i class="fa-solid fa-chevron-right text-[#262626] text-[1.4rem]"></i>
+
 
             </p>
           </div>
@@ -609,7 +618,8 @@ const Home = () => {
               Miami, FL
             </p>
             <p className="w-[3.2rem] h-[3.2rem] border border-black rounded-full text-[2rem] flex justify-center items-center">
-            >
+            <i class="fa-solid fa-chevron-right text-[#262626] text-[1.4rem]"></i>
+
 
             </p>
           </div>
@@ -741,7 +751,7 @@ const Home = () => {
           <p className="ml-[3.4rem] w-[14.2rem] geographr">©2022 GOODVETS</p>
           <p className="ml-[40.8rem] w-[14.2rem] geographr">Terms & Legal</p>
           <p className="ml-[13.3rem] w-[14.2rem] geographr">Privacy Policy</p>
-          <div className="flex space-x-[2rem] ml-[13.3rem] ">
+          <div className="flex space-x-[2rem] ml-[17.4rem] ">
             <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
             <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
             <div className="w-[2.4rem] h-[2.4rem] border border-white rounded-full"></div>
@@ -749,6 +759,9 @@ const Home = () => {
           </div>
         </div>
       </footer>
+
+
+     
     </>
   );
 };

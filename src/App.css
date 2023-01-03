@@ -1,5 +1,6 @@
 html{
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 @font-face {
   font-family: grenette pro;
@@ -28,6 +29,13 @@ html{
   box-sizing: border-box;
   font-family: "Grenette Pro";
 }
+body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 .slick-track{
   display: flex !important;
 }
@@ -41,7 +49,13 @@ html{
   font-family:" grenette pro sm";
 
 }
+.slick-next {
+  right: 0;
+}
 
+.Review .slick-slider .slick-list .slick-track .slick-slide:nth-child(1) {
+  margin-right: 0;
+}
 .Review .slick-slider .slick-list .slick-track .slick-slide {
   height:  81.6rem !important;
   width: auto !important;
@@ -50,6 +64,7 @@ html{
 .GStories .slick-slider .slick-list .slick-track .slick-slide{
   margin-right: 7.8rem;
   /* margin-right: 2.3rem; */
+  /* width: 49.5rem !important; */
 
 }
 .Modular .slick-slider .slick-list .slick-track .slick-slide{
