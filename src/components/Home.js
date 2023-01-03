@@ -26,6 +26,7 @@ import Blob3 from "../img/blob-3.svg"
 import Search from "../img/Search.png"
 import arrow from "../img/arrow.svg"
 import Logo from "../img/logo.svg"
+import img3 from "../img/img3.jpg"
 
 const Home = () => {
   const [element, setCard] = useState(null)
@@ -233,7 +234,7 @@ const Home = () => {
               className={`row1 ml-[5rem] flex justify-start min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
               style={{ position: "relative", left: `${left}%` }}
             >
-              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem]  rounded-[6px]" style={{background : `url(${Slider1})`, backgroundSize : "cover", backgroundPosition : "center"}}></div>
+              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem]  rounded-[6px]" style={{background : `url(${Ho3}) center center`, backgroundSize : "cover", backgroundPosition : "center"}}></div>
               <div className="r2 mx-[3.9rem] flex flex-col justify-center items-start text-[#282826]">
                 <h1 className="geographm text-[4rem] leading-[4.8rem]  mb-8 ">
                   Veterinarian-Led <br /> Medicine
@@ -249,7 +250,7 @@ const Home = () => {
               className={`row1 flex justify-start min-w-[100%] relative transition-all duration-[0.5s] ease-in-out`}
               style={{ position: "relative", left: `${left}%` }}
             >
-              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]" style={{background : `url(${Ho3})`, backgroundSize : "cover", backgroundPosition : "center"}}></div>
+              <div className="r1 mx-[3.9rem] h-[42rem] w-[58.2rem] bg-slate-300 rounded-[6px]" style={{background : `url(${Slider1})`, backgroundSize : "cover", backgroundPosition : "center"}}></div>
               <div className="r2 mx-[3.9rem] flex flex-col justify-center items-start text-[#282826]">
                 <h1 className="geographm text-[4rem] leading-[4.8rem]  mb-8 ">
                   Mentorship From Our <br /> Chief Medical Officer
@@ -394,7 +395,7 @@ const Home = () => {
             </div>
           </div>
           <div className="row1 flex justify-center mt-[20rem]">
-            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[2.4rem] relative" style={{background : `url(${Ho3})`, backgroundPosition : "center", backgroundSize : "cover"}}>
+            <div className="r1 mx-[3.9rem] h-[40rem] w-[58.2rem] bg-slate-300 rounded-[2.4rem] relative" style={{background : `url(${img3})`, backgroundPosition : "center", backgroundSize : "cover"}}>
             <div className="w-[22.4rem] h-[21.6rem]  absolute left-[52.2rem] bottom-[24.88rem] flex justify-center items-center">
                 <p className="text-[#262626] absolute top-[4.2rem] left-[4.1rem]  text-[10rem] leading-[8rem] tracking-[-.2rem] w-[14.2rem] h-[13.2rem] flex justify-center items-center">3</p>
               <img src={Blob3} alt="" />
@@ -620,48 +621,56 @@ const Home = () => {
       </section>
 
       <section className="bg-[#FAF6F4] pt-[9.9rem] pb-[10rem] flex flex-col justify-center items-end">
-        <h1 className="geographm text-[7rem] mx-auto mb-[9rem] leading-[8rem]  text-left w-screen pl-[8.9rem]">
+        <h1 className="geographm text-[4rem] mx-auto mb-[8rem] leading-[4.8rem]  text-left w-screen pl-[8.9rem]">
           <span className="geographm text-yellow-500"> Good Stories </span>
           from GoodVets
         </h1>
         <div className=" GStories max-w-[127.7rem]" id="cards" >
           <Slider {...settings}>
-            <div className=" h-[58.4rem] bg-white w-[41.7rem]">
-              <div className="w-[41.7rem] h-[40rem] bg-center bg-cover"  style={{background : `url(${One})`, backgroundSize : "cover"}}></div>
+            <div className=" h-[58.4rem] bg-white w-[41.7rem] rounded-[.6rem]">
+              <div className="w-[41.7rem] h-[40rem] bg-center bg-cover relative"  style={{background : `url(${One})`, backgroundSize : "cover"}}>
+                <button className="w-[8.4rem] h-[3rem] bg-transparent border-[.1rem] atlasr border-white rounded-[1.5rem] text-[1.4rem] leading-[2rem] text-white absolute bottom-[2rem] left-[2rem] tracking-[.34px]]">HOW TO</button>
+              </div>
               <p className="grennetesm text-[2.2rem] leading-[2.9rem]  mt-[3rem] ml-[2rem] w-[34.3rem]">
                 How to build a successful career in the veterinary industry.
               </p>
-              <p className="geographr text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">
+              <p className="geographr text-[1.4rem] leading-[1.8rem] mt-[4rem] ml-[2rem] ">
                 BY AUTHOR NAME <br />
                 <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
               </p>
             </div>
-            <div className=" h-[58.4rem] bg-white w-[41.7rem]">
-              <div className="w-[41.7rem] h-[40rem] bg-slate-400"  style={{background : `url(${two})`, backgroundSize : "cover"}}></div>
+            <div className=" h-[58.4rem] bg-white w-[41.7rem] rounded-[.6rem]">
+              <div className="w-[41.7rem] h-[40rem] bg-slate-400 relative"  style={{background : `url(${two})`, backgroundSize : "cover"}}>
+              <button className="w-[12.2rem] h-[3rem] bg-transparent border-[.1rem] atlasr border-white rounded-[1.5rem] text-[1.4rem] leading-[2rem] text-white absolute bottom-[2rem] left-[2rem] tracking-[.34px]]">MENTORSHIP</button>
+              </div>
               <p className=" grennetesm text-[2.2rem] leading-[2.9rem]  mt-[3rem] ml-[2rem] w-[34.3rem]">
                 Dr. Sheela Moss on how being a mentor enriches her career.
               </p>
-              <p className="geographr text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">
+              <p className="geographr text-[1.4rem] leading-[1.8rem] mt-[4rem] ml-[2rem] ">
+                BY AUTHOR NAME <br />
+                <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
+              </p>
+            </div>
+            <div className=" h-[58.4rem] bg-white w-[41.7rem] rounded-[.6rem]">
+              <div className="w-[41.7rem] h-[40rem] bg-slate-400 relative"  style={{background : `url(${three})`, backgroundSize : "cover"}}>
+              <button className="w-[13.2rem] h-[3rem] bg-transparent border-[.1rem] atlasr border-white rounded-[1.5rem] text-[1.4rem] leading-[2rem] text-white absolute bottom-[2rem] left-[2rem] tracking-[.34px]]">VIRTUAL TOUR</button>
+              </div>
+              <p className="grennetesm text-[2.2rem] leading-[2.9rem]  mt-[3rem] ml-[2rem] w-[34.3rem]">
+                Dr. Sheela Moss on how being a mentor enriches her career.
+              </p>
+              <p className="geographr text-[1.4rem] leading-[1.8rem] mt-[4rem] ml-[2rem] ">
                 BY AUTHOR NAME <br />
                 <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
               </p>
             </div>
             <div className=" h-[58.4rem] bg-white w-[41.7rem]">
-              <div className="w-[41.7rem] h-[40rem] bg-slate-400"  style={{background : `url(${three})`, backgroundSize : "cover"}}></div>
+              <div className="w-[41.7rem] h-[40rem] bg-slate-400 relative"  style={{background : `url(${four})`, backgroundSize : "cover"}}>
+              <button className="w-[13.2rem] h-[3rem] bg-transparent border-[.1rem] atlasr border-white rounded-[1.5rem] text-[1.4rem] leading-[2rem] text-white absolute bottom-[2rem] left-[2rem] tracking-[.34px]]">VIRTUAL TOUR</button>
+              </div>
               <p className="grennetesm text-[2.2rem] leading-[2.9rem]  mt-[3rem] ml-[2rem] w-[34.3rem]">
                 Dr. Sheela Moss on how being a mentor enriches her career.
               </p>
-              <p className="geographr text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">
-                BY AUTHOR NAME <br />
-                <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
-              </p>
-            </div>
-            <div className=" h-[58.4rem] bg-white w-[41.7rem]">
-              <div className="w-[41.7rem] h-[40rem] bg-slate-400"  style={{background : `url(${four})`, backgroundSize : "cover"}}></div>
-              <p className="grennetesm text-[2.2rem] leading-[2.9rem]  mt-[3rem] ml-[2rem] w-[34.3rem]">
-                Dr. Sheela Moss on how being a mentor enriches her career.
-              </p>
-              <p className="geographr text-[1.4rem] leading-[1.8rem] mt-[2rem] ml-[2rem] ">
+              <p className="geographr text-[1.4rem] leading-[1.8rem] mt-[4rem] ml-[2rem] ">
                 BY AUTHOR NAME <br />
                 <span className="text-[#D9C7B8]"> AUTHOR TITLE</span>
               </p>

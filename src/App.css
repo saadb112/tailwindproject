@@ -17,6 +17,10 @@ html{
   font-family: geographr;
   src: url("./Fonts/geograph-regular/Geograph-Regular.ttf");
 }
+@font-face {
+  font-family: atlasr;
+  src: url("./Fonts/atlas-grotesk-regular/AtlasGrotesk-Regular.ttf");
+}
 
 *{
   padding: 0;
@@ -37,6 +41,7 @@ html{
   font-family:" grenette pro sm";
 
 }
+
 .Review .slick-slider .slick-list .slick-track .slick-slide {
   height:  81.6rem !important;
   width: auto !important;
@@ -61,4 +66,7 @@ height: 100%;
 .reviews div{
   background-position: center;
   background-size: cover;
+}
+.atlasr{
+  font-family:"atlasr";
 }
