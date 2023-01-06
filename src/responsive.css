@@ -23,3 +23,24 @@
         font-size: 36%;
     }
 }
+@media screen and (max-width : 730px) {
+    html{
+        font-size: 28%;
+    }
+}
+@media screen and (max-width : 600px) {
+    html{
+        font-size: 22%;
+    }
+}
+@media screen and (max-width : 470px) {
+    html{
+        font-size: 18%;
+    }
+}
+
+@media screen and (max-width : 390px) {
+    html{
+        font-size: 62.5%;
+    }
+}

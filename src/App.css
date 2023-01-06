@@ -49,6 +49,10 @@ body {
   font-family:" grenette pro sm";
 
 }
+.center{
+  background-position: center !important;
+  background-size: cover !important;
+}
 .slick-next {
   right: 0;
 }
